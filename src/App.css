@@ -91,3 +91,18 @@ body {
 #footer {
   background: url("./img/info-bg2.jpg") no-repeat left 50% bottom -110px;
 }
+
+/* Character Creation page */
+#char-create {
+  margin-bottom: 50px;
+}
+
+.main-window {
+  margin-top: 50px;
+  border: 1px solid #ccc;
+  padding: 1rem;
+}
+
+.human-race .img-wraper img {
+  width: 100%;
+}

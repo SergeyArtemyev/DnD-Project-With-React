@@ -14,7 +14,7 @@ const Navbar = () => {
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/create-character">Chreacte Character</Link>
+            <a href="/create-character">Chreacte Character</a>
           </li>
         </ul>
       </div>

@@ -5,6 +5,7 @@ import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
 import Home from "./components/pages/Home";
 import CreateCharacter from "./components/pages/CreateCharacter";
+import RaceState from "./context/Race/RaceState";
 
 import "materialize-css/dist/css/materialize.min.css";
 import M from "materialize-css/dist/js/materialize.min.js";
@@ -17,14 +18,16 @@ const App = () => {
   });
 
   return (
-    <Router>
-      <Navbar />
-      <Switch>
-        <Route exact path="/" component={Home}></Route>
-        <Route exact path="/create-character" component={CreateCharacter}></Route>
-      </Switch>
-      <Footer />
-    </Router>
+    <RaceState>
+      <Router>
+        <Navbar />
+        <Switch>
+          <Route exact path="/" component={Home}></Route>
+          <Route exact path="/create-character" component={CreateCharacter}></Route>
+        </Switch>
+        <Footer />
+      </Router>
+    </RaceState>
   );
 };
 
