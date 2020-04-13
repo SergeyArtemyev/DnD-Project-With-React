@@ -106,3 +106,11 @@ body {
 .human-race .img-wraper img {
   width: 100%;
 }
+/* Description section */
+.description {
+  padding: 1rem;
+  border: 1px solid #e0e0e0;
+}
+.collapsible-header {
+  justify-content: space-between;
+}

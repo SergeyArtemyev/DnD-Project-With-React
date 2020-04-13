@@ -1,4 +1,4 @@
-import { GET_RACE, GET_RACIAL_TRAITS, PUSH_LANGUAGE } from "../../types";
+import { GET_RACE, GET_RACIAL_TRAITS, GET_DESCRIPTION } from "../../types";
 
 export default (state, action) => {
   switch (action.type) {
@@ -12,10 +12,10 @@ export default (state, action) => {
         ...state,
         racialTraits: action.payload === undefined ? state.racialTraits : action.payload,
       };
-    case PUSH_LANGUAGE:
+    case GET_DESCRIPTION:
       return {
         ...state,
-        language: action.payload,
+        description: action.payload === undefined ? state.description : action.payload,
       };
     default:
       return state;

@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import RaceContext from "../../../context/Race/raceContext";
 import { v4 } from "uuid";
 
@@ -7,16 +7,8 @@ const RaceTraits = () => {
 
   const {
     race,
-    racialTraits: { racialTraits },
-    pushLanguage,
+    racialTraits: { abscore, skills },
   } = raceContext;
-
-  const [language, setLanguage] = useState("");
-
-  const onChange = (e) => {
-    setLanguage(e.target.value);
-    pushLanguage(language);
-  };
 
   let select;
 
@@ -26,7 +18,7 @@ const RaceTraits = () => {
         <>
           <li className="collection-item">
             <label>Extra Language</label>
-            <select name="human-extra-lang" className="browser-default" onChange={onChange}>
+            <select name="human-extra-lang" className="browser-default">
               <option value="none">- Choose a Language -</option>
               <option value="Abyssal">Abyssal</option>
               <option value="Draconic">Draconic</option>
@@ -90,11 +82,9 @@ const RaceTraits = () => {
   return (
     <div>
       <ul className="collection">
-        <li className="collection-item">
-          {racialTraits !== undefined ? racialTraits.abscore : null}
-        </li>
-        {racialTraits !== undefined && racialTraits.skills !== undefined
-          ? racialTraits.skills.map((skill) => (
+        <li className="collection-item">{abscore}</li>
+        {skills !== undefined
+          ? skills.map((skill) => (
               <li key={v4()} className="collection-item">
                 {skill}
               </li>

@@ -5,6 +5,7 @@ import elf from "../../../img/form_img/elf.jpg";
 import halfling from "../../../img/form_img/halfling.jpg";
 import dwarf from "../../../img/form_img/dwarf.jpg";
 import RaceTraits from "./RaceTraits";
+import RaceDescription from "./RaceDescription";
 
 const Race = () => {
   const raceContext = useContext(RaceContext);
@@ -70,7 +71,7 @@ const Race = () => {
             </div>
           </div>
         </div>
-        <div className="col s12 m12 l6">test</div>
+        <div className="col s12 m12 l6">{racePicture !== "" ? <RaceDescription /> : null}</div>
       </div>
     </div>
   );
