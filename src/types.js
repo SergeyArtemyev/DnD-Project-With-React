@@ -1,4 +1,6 @@
 export const GET_RACE = "GET_RACE";
+export const GET_CLASS = "GET_CLASS";
 export const GET_RACIAL_TRAITS = "GET_RACIAL_TRAITS";
+export const GET_CLASS_FEATURES = "GET_CLASS_FEATURES";
 export const PUSH_LANGUAGE = "PUSH_LANGUAGE";
 export const GET_DESCRIPTION = "GET_DESCRIPTION";

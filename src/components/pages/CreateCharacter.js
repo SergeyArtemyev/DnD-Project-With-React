@@ -1,5 +1,6 @@
 import React from "react";
-import Race from "../layout/createCharacter/Race";
+import Race from "../layout/createCharacter/race/Race";
+import Class from "../layout/createCharacter/class/Class";
 
 const CreateCharacter = () => {
   return (
@@ -34,7 +35,7 @@ const CreateCharacter = () => {
                 <Race />
               </div>
               <div id="test2" className="col s12">
-                Test 2
+                <Class />
               </div>
               <div id="test3" className="col s12">
                 Test 3

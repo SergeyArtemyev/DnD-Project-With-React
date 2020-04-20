@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import RaceContext from "../../../context/Race/raceContext";
+import RaceContext from "../../../../context/Race/raceContext";
 import { v4 } from "uuid";
 
 const RaceTraits = () => {
