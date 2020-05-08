@@ -57,15 +57,13 @@ body {
 /* Main-content */
 #main-content {
   position: relative;
-  background: url("./img/info-bg.jpg") no-repeat left 24% top 30%,
-    url("./img/info-bg3.jpg") no-repeat right 20% bottom 0;
+  background: url("./img/info-bg.jpg") no-repeat left 24% top 30%, url("./img/info-bg3.jpg") no-repeat right 20% bottom 0;
   border-top: 5px solid #ee5b60;
   border-bottom: 5px solid #ee5b60;
 }
 #main-content:after {
   content: "";
-  background: url("./img/left-side-frame.jpg") no-repeat left,
-    url("./img/right-side-frame.jpg") no-repeat right;
+  background: url("./img/left-side-frame.jpg") no-repeat left, url("./img/right-side-frame.jpg") no-repeat right;
   /* background-size: 16%; */
   opacity: 0.3;
   top: 0;
@@ -101,8 +99,7 @@ body {
   margin-top: 50px;
   border: 1px solid #ccc;
   padding: 1rem;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12),
-    0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
 }
 
 img {
@@ -115,4 +112,84 @@ img {
 }
 .collapsible-header {
   justify-content: space-between;
+}
+
+/* Ability score */
+.ab-score {
+  margin-bottom: 2rem;
+}
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+  text-align: left;
+  margin-right: 1rem;
+  box-sizing: border-box !important;
+}
+th,
+td {
+  border: 1px solid #ccc;
+  padding: 0.5rem 0.8rem;
+  user-select: none;
+}
+.hidden-input {
+  width: 18px !important;
+  border: none !important;
+  background: none !important;
+  font: inherit !important;
+}
+input {
+  height: initial !important;
+}
+
+table.score {
+  width: auto;
+  font-size: 0.8rem;
+  text-align: center;
+  display: inline-block;
+  vertical-align: top;
+}
+table.score th,
+table.score td {
+  padding: 0.3rem;
+}
+table.score td {
+  font-family: initial;
+}
+
+.ability-input {
+  border: none !important;
+  width: 17px !important;
+  background: none !important;
+  font-family: inherit !important;
+  font-size: 1rem !important;
+}
+.ability-input:focus {
+  outline: none;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+.plus,
+.minus {
+  margin-left: -4px;
+  font-size: 0.9rem;
+  color: #4caf50;
+  cursor: pointer;
+  padding: 0;
+  background: unset;
+  border: none;
+}
+.plus:focus,
+.minus:focus {
+  outline: none;
+  background: none;
+}
+.plus:active,
+.minus:active {
+  color: #3a833c;
+}
+
+.minus-icon {
+  visibility: hidden;
 }
