@@ -2,6 +2,7 @@ import React from "react";
 import Race from "../layout/createCharacter/race/Race";
 import Class from "../layout/createCharacter/class/Class";
 import Abilities from "../layout/createCharacter/abilities/Abilities";
+import Description from "../layout/createCharacter/description/Description";
 
 const CreateCharacter = () => {
   return (
@@ -42,7 +43,7 @@ const CreateCharacter = () => {
                 <Abilities />
               </div>
               <div id="test4" className="col s12">
-                Test 4
+                <Description />
               </div>
               <div id="test5" className="col s12">
                 Test 4
