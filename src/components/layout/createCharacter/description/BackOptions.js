@@ -1,65 +1,66 @@
-import React, { useContext, useState, useEffect } from "react";
+import React, { useContext } from "react";
 import BackgroundContext from "../../../../context/Background/backgroundContext";
-import M from "materialize-css/dist/js/materialize.min.js";
 
-import { v4 } from "uuid";
+import AdLang from "../../../selects/AdLang";
+import AdLang1 from "../../../selects/AdLang1";
+import AdLang2 from "../../../selects/AdLang2";
+import ArtisanTool from "../../../selects/ArtisanTool";
+import GameSet from "../../../selects/GameSet";
 
 const BackOptions = () => {
   const backgroundContext = useContext(BackgroundContext);
-  const [backgroundName, setBackgroundName] = useState("");
-  const {
-    getBackground,
-    description: { info, skillProff, toolProff, vehicleProff, backFeature, featureInfo },
-  } = backgroundContext;
-
-  useEffect(() => {
-    getBackground(backgroundName);
-    M.AutoInit();
-    // eslint-disable-next-line
-  }, [backgroundName]);
-
-  const onChange = (e) => {
-    setBackgroundName(e.target.value);
-  };
-  return (
-    <>
-      <div className="row">
-        <div className="input-field col s4">
-          <select className="browser-default" onChange={onChange}>
-            <option value="">--Choose your background--</option>
-            <option value="Acolyte">Acolyte</option>
-            <option value="Criminal or Spy">Criminal/Spy</option>
-            <option value="Folk Hero">Folk Hero</option>
-            <option value="Haunted One">Haunted One</option>
-            <option value="Sage">Sage</option>
-            <option value="Soldier">Soldier</option>
-          </select>
-        </div>
-      </div>
-      {backgroundName === "" ? null : (
+  const { background } = backgroundContext;
+  let newSelect;
+  switch (background) {
+    case "Acolyte":
+      newSelect = (
         <>
-          <hr />
-          <p>{info}</p>
-          <p>
-            Skill Proficiencies:{" "}
-            {skillProff !== undefined
-              ? skillProff.map((skill) => <span key={v4()}> {skill} </span>)
-              : null}
-          </p>
-          {toolProff !== undefined ? <p>Tool Proficiencies: {toolProff}</p> : null}
-          {vehicleProff !== undefined ? <p>Vehicle Proficiencies: {vehicleProff}</p> : null}
-          <ul className="collapsible">
-            <li>
-              <div className="collapsible-header">{backFeature}</div>
-              <div className="collapsible-body">
-                <span>{featureInfo}</span>
-              </div>
-            </li>
-          </ul>
+          <AdLang1 />
+          <AdLang2 />
         </>
-      )}
-    </>
-  );
+      );
+      break;
+    case "Criminal or Spy":
+      newSelect = (
+        <>
+          <GameSet />
+        </>
+      );
+      break;
+    case "Folk Hero":
+      newSelect = (
+        <>
+          <ArtisanTool />
+        </>
+      );
+      break;
+    case "Haunted One":
+      newSelect = (
+        <>
+          <AdLang />
+        </>
+      );
+      break;
+    case "Sage":
+      newSelect = (
+        <>
+          <AdLang1 />
+          <AdLang2 />
+        </>
+      );
+      break;
+    case "Soldier":
+      newSelect = (
+        <>
+          <GameSet />
+        </>
+      );
+      break;
+    default:
+      newSelect = null;
+  }
+
+  return <ul>{newSelect}</ul>;
 };
 
 export default BackOptions;

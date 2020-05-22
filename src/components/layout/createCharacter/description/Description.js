@@ -1,6 +1,8 @@
 import React from "react";
 import DescAvatars from "./DescAvatars";
 import Background from "./Background";
+import CharDetails from "./CharDetails";
+import PhysCharacteristics from "./PhysCharacteristics";
 
 const Description = () => {
   return (
@@ -10,6 +12,21 @@ const Description = () => {
       <h4 className="center-align">Background</h4>
       <Background />
       <hr />
+      <ul className="collapsible">
+        <li>
+          <div className="collapsible-header">Character Details</div>
+          <div className="collapsible-body">
+            <CharDetails />
+          </div>
+        </li>
+        <li>
+          <div className="collapsible-header">Physical Characteristics</div>
+          <div className="collapsible-body">
+            <PhysCharacteristics />
+          </div>
+        </li>
+      </ul>
+      <br />
     </div>
   );
 };
