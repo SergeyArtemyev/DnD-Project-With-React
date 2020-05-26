@@ -152,7 +152,7 @@ function abilityScoreFunction() {
 
     if (remainingPoints > 0) {
       for (let j = 0; j < document.getElementsByClassName("plus-icon").length; j++) {
-        if (document.getElementsByClassName("ability-input")[j].value === 15) {
+        if (document.getElementsByClassName("ability-input")[j].value === "15") {
           document.getElementsByClassName("plus-icon")[j].style.visibility = "hidden";
         } else {
           document.getElementsByClassName("plus-icon")[j].style.visibility = "visible";

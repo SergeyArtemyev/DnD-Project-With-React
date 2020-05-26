@@ -3,8 +3,13 @@ import Race from "../layout/createCharacter/race/Race";
 import Class from "../layout/createCharacter/class/Class";
 import Abilities from "../layout/createCharacter/abilities/Abilities";
 import Description from "../layout/createCharacter/description/Description";
+import Equipment from "../layout/createCharacter/equipment/Equipment";
 
 const CreateCharacter = () => {
+  function next() {
+    // находить элемент с актив и жать клин на слекдующий элемент
+    document.querySelector(".test").click();
+  }
   return (
     <section id="char-create">
       <div className="container">
@@ -14,7 +19,7 @@ const CreateCharacter = () => {
             <div className="row">
               <div className="col s12">
                 <ul className="tabs">
-                  <li className="tab col s2">
+                  <li className="tab col s2  offset-s1">
                     <a className="active" href="#test1">
                       Race
                     </a>
@@ -23,7 +28,9 @@ const CreateCharacter = () => {
                     <a href="#test2">Class</a>
                   </li>
                   <li className="tab col s2">
-                    <a href="#test3">Ability</a>
+                    <a className="test" href="#test3">
+                      Ability
+                    </a>
                   </li>
                   <li className="tab col s2">
                     <a href="#test4">Description</a>
@@ -46,10 +53,13 @@ const CreateCharacter = () => {
                 <Description />
               </div>
               <div id="test5" className="col s12">
-                Test 4
+                <Equipment />
               </div>
             </div>
           </form>
+          <button id="btn" onClick={next}>
+            next
+          </button>
         </div>
       </div>
     </section>
