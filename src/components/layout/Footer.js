@@ -5,7 +5,7 @@ const Footer = () => {
     <footer id="footer">
       <div className="container">
         <div className="row">
-          <div className="col s6 l4">
+          <div className="col s6 l4 developer">
             <p>Developer: Jkss</p>
             <p>
               Project: Jkss World <span>&copy;</span>

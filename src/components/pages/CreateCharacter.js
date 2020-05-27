@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Race from "../layout/createCharacter/race/Race";
 import Class from "../layout/createCharacter/class/Class";
 import Abilities from "../layout/createCharacter/abilities/Abilities";
@@ -6,14 +6,51 @@ import Description from "../layout/createCharacter/description/Description";
 import Equipment from "../layout/createCharacter/equipment/Equipment";
 
 const CreateCharacter = () => {
+  useEffect(() => {
+    let prev = document.querySelector(".prev");
+    prev.style.display = "none";
+  });
+
+  function prev() {
+    let links = document.querySelector(".tabs").getElementsByTagName("a");
+    let next = document.querySelector(".next");
+    let prev = document.querySelector(".prev");
+    for (let i = 0; i < links.length; i++) {
+      if (i === 1) {
+        prev.style.display = "none";
+      } else {
+        next.style.display = "inline-block";
+        prev.style.display = "inline-block";
+      }
+      if (links[i].classList.contains("active")) {
+        links[i].classList.remove("active");
+        links[i - 1].click();
+        break;
+      }
+    }
+  }
   function next() {
-    // находить элемент с актив и жать клин на слекдующий элемент
-    document.querySelector(".test").click();
+    let links = document.querySelector(".tabs").getElementsByTagName("a");
+    let next = document.querySelector(".next");
+    let prev = document.querySelector(".prev");
+    for (let i = 0; i < links.length; i++) {
+      if (links[i].classList.contains("active")) {
+        if (i === 3) {
+          next.style.display = "none";
+        } else {
+          next.style.display = "inline-block";
+          prev.style.display = "inline-block";
+        }
+        links[i].classList.remove("active");
+        links[i + 1].click();
+        break;
+      }
+    }
   }
   return (
     <section id="char-create">
       <div className="container">
-        <h4 className="center-align">Welcome to the character creation page</h4>
+        <h4 className="center-align create-header">Welcome to the character creation page</h4>
         <div className="main-window">
           <form id="creation-form">
             <div className="row">
@@ -57,9 +94,14 @@ const CreateCharacter = () => {
               </div>
             </div>
           </form>
-          <button id="btn" onClick={next}>
-            next
-          </button>
+          <div className="form-btns">
+            <button className="prev" onClick={prev}>
+              <i className="material-icons">arrow_back</i> <span>Prev</span>
+            </button>
+            <button className="next" onClick={next}>
+              <span>Next</span> <i className="material-icons">arrow_forward</i>
+            </button>
+          </div>
         </div>
       </div>
     </section>

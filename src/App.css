@@ -1,5 +1,4 @@
 body {
-  /* background: #eeeeee; */
   font-family: "Permanent Marker", cursive;
 }
 .main-bg {
@@ -10,6 +9,26 @@ body {
 }
 .main-bg:hover {
   background: #ee6e73;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #c25054;
+  /* text-shadow: 0 0 3px #000; */
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.596), 1px 0 1px rgba(0, 0, 0, 0.596), 0 0 2px #000000;
+}
+/* Navbar */
+nav,
+footer {
+  position: relative;
+  z-index: 2;
+}
+.brand-logo,
+nav ul li a {
+  text-shadow: 0 0 3px #000;
 }
 /* Showcase section */
 
@@ -90,26 +109,53 @@ body {
 /* Footer */
 #footer {
   background: url("./img/info-bg2.jpg") no-repeat left 50% bottom -110px;
+  box-shadow: 0 -2px 2px 0 rgba(0, 0, 0, 0.14), 0 -3px 1px -2px rgba(0, 0, 0, 0.12),
+    0 -1px 5px 0 rgba(0, 0, 0, 0.2);
+}
+#footer .row {
+  margin-bottom: 0;
+}
+#footer .developer {
+  margin-top: 20px;
 }
 
 /* Character Creation page */
 #char-create {
-  margin-bottom: 50px;
+  background: url("./img/body-background3.jpg") no-repeat center center/cover;
+  background-attachment: fixed;
+  padding: 8rem 0;
+}
+#char-create .create-header {
+  margin-top: 0;
+  position: relative;
+  z-index: 1;
 }
 
 .main-window {
+  position: relative;
   margin-top: 50px;
-  border: 1px solid #ccc;
+  border: 1px solid #f4f4f4;
+  background: #fff;
   padding: 1rem;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12),
-    0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  min-height: 417px;
+  /* box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12),
+    0 1px 5px 0 rgba(0, 0, 0, 0.2); */
+  box-shadow: 200px 0px 200px 96px rgba(255, 255, 255, 0.9),
+    -200px 0px 200px 96px rgba(255, 255, 255, 0.9);
 }
 
 img {
   width: 100%;
 }
-.tabs {
+/* Tabs */
+#char-create .tabs li a {
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.596), 1px 0 1px rgba(0, 0, 0, 0.596), 0 0 2px #000000;
+  color: #ee6e73;
 }
+#char-create .tabs li a.active {
+  color: #ff4e54;
+}
+
 /* Description section */
 .description {
   padding: 1rem;
@@ -242,4 +288,34 @@ input[type="number"]::-webkit-outer-spin-button {
   display: inline-block;
   width: 49%;
   margin-bottom: 2rem;
+}
+
+/* Form btns */
+.form-btns {
+  text-align: right;
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+}
+.form-btns button {
+  border: none;
+  background: #ee5b60;
+  padding: 0.4rem 1rem 0.3rem;
+  margin-left: 0.5rem;
+  color: #f4f4f4;
+  font-family: inherit;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.63);
+  transition: all 0.2s ease-in;
+}
+.form-btns button:hover {
+  background: #e7585d;
+}
+.form-btns span {
+  vertical-align: super;
+  text-shadow: 0 0 3px #000;
+}
+.form-btns i {
+  text-shadow: 0 0 3px #000;
 }
