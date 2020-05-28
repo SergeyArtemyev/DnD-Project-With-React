@@ -1,11 +1,15 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useContext } from "react";
 import Race from "../layout/createCharacter/race/Race";
 import Class from "../layout/createCharacter/class/Class";
 import Abilities from "../layout/createCharacter/abilities/Abilities";
 import Description from "../layout/createCharacter/description/Description";
 import Equipment from "../layout/createCharacter/equipment/Equipment";
+import PlayerContext from "../../context/Player/playerContext";
 
 const CreateCharacter = () => {
+  const playerContext = useContext(PlayerContext);
+  const { addPlayer } = playerContext;
+
   useEffect(() => {
     let prev = document.querySelector(".prev");
     prev.style.display = "none";
@@ -47,12 +51,27 @@ const CreateCharacter = () => {
       }
     }
   }
+  const onSubmit = () => {
+    let formElem = document.querySelector("form");
+    new FormData(formElem);
+    formElem.addEventListener("formdata", (e) => {
+      let words = [];
+      let data = e.formData;
+      for (let pair of data.entries()) {
+        words.push([pair[0], pair[1]]);
+      }
+      data = Object.fromEntries(words);
+      data = JSON.stringify(data);
+      addPlayer(data);
+    });
+  };
+
   return (
     <section id="char-create">
       <div className="container">
         <h4 className="center-align create-header">Welcome to the character creation page</h4>
         <div className="main-window">
-          <form id="creation-form">
+          <form id="creation-form" action="http://localhost:3000/player" onSubmit={onSubmit}>
             <div className="row">
               <div className="col s12">
                 <ul className="tabs">
@@ -93,6 +112,7 @@ const CreateCharacter = () => {
                 <Equipment />
               </div>
             </div>
+            <button type="submit">Submit</button>
           </form>
           <div className="form-btns">
             <button className="prev" onClick={prev}>

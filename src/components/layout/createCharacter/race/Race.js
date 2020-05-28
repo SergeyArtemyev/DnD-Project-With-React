@@ -43,7 +43,7 @@ const Race = () => {
           <div className="row">
             <div className="col m6 s6">
               <div className="input-fields col s12 m12">
-                <select onChange={onChange} className="icons">
+                <select onChange={onChange} name="race" className="icons">
                   <option value="" defaultValue>
                     Choose Race
                   </option>
