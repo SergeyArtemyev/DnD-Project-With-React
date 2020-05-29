@@ -55,8 +55,7 @@ const CreateCharacter = () => {
   const onSubmit = (e) => {
     e.preventDefault();
     let formElem = document.querySelector("form");
-    new FormData(formElem);
-    formElem.addEventListener("formdata", (e) => {
+    formElem.addEventListener("formdata", async (e) => {
       let words = [];
       let data = e.formData;
       for (let pair of data.entries()) {
@@ -64,8 +63,10 @@ const CreateCharacter = () => {
       }
       data = Object.fromEntries(words);
       data = JSON.stringify(data);
-      addPlayer(data);
+      await addPlayer(data);
+      window.location = "/player";
     });
+    new FormData(formElem);
   };
 
   // if (isCreated) {
