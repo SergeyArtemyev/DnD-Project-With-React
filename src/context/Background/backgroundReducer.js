@@ -1,4 +1,4 @@
-import { GET_BACKGROUND, GET_DESCRIPTION } from "../../types";
+import { GET_BACKGROUND, GET_DESCRIPTION, GET_AVATAR } from "../../types";
 
 export default (state, action) => {
   switch (action.type) {
@@ -11,6 +11,11 @@ export default (state, action) => {
       return {
         ...state,
         description: action.payload === undefined ? state.description : action.payload,
+      };
+    case GET_AVATAR:
+      return {
+        ...state,
+        avatar: action.payload,
       };
     default:
       return state;

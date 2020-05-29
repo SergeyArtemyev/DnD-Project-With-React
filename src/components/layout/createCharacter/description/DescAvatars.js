@@ -1,13 +1,30 @@
-import React from "react";
+import React, { useEffect, useState, useContext } from "react";
+import chooseAvatar from "../../../../js/chooseAvatar";
+import BackgroundContext from "../../../../context/Background/backgroundContext";
 
 const DescAvatars = () => {
+  const backgroundContext = useContext(BackgroundContext);
+  const { getAvatar } = backgroundContext;
+  const [mainAvatar, setMainAvatar] = useState(require("../../../../img/avatars/avatar.png"));
+
+  useEffect(() => {
+    chooseAvatar();
+    getAvatar(mainAvatar);
+    // eslint-disable-next-line
+  }, [mainAvatar]);
+
+  const onClick = () => {
+    let avatar = document.querySelector(".main-avatar").src;
+    setMainAvatar(avatar);
+  };
+
   return (
     <div className="row">
       <div className="col s4 offset-s4">
         <div className="row">
           {/* Modal Trigger */}
           <a className="modal-trigger avatar col s3" href="#modal1">
-            <img src={require("../../../../img/avatars/avatar.png")} alt="avatar" />
+            <img className="main-avatar" src={mainAvatar} alt="avatar" />
             <i className="material-icons img-icon">add</i>
           </a>
           {/* Modal Structure */}
@@ -21,6 +38,7 @@ const DescAvatars = () => {
                 <div className="row mb-1">
                   <div className="col s3">
                     <img
+                      onClick={onClick}
                       className="avatar-img"
                       src={require("../../../../img/avatars/human/human1.png")}
                       alt="human avatar"
@@ -28,6 +46,7 @@ const DescAvatars = () => {
                   </div>
                   <div className="col s3">
                     <img
+                      onClick={onClick}
                       className="avatar-img"
                       src={require("../../../../img/avatars/human/human2.jpeg")}
                       alt="human avatar"
@@ -35,6 +54,7 @@ const DescAvatars = () => {
                   </div>
                   <div className="col s3">
                     <img
+                      onClick={onClick}
                       className="avatar-img"
                       src={require("../../../../img/avatars/human/human3.jpeg")}
                       alt="human avatar"
@@ -42,6 +62,7 @@ const DescAvatars = () => {
                   </div>
                   <div className="col s3">
                     <img
+                      onClick={onClick}
                       className="avatar-img"
                       src={require("../../../../img/avatars/human/human4.jpeg")}
                       alt="human avatar"
@@ -52,6 +73,7 @@ const DescAvatars = () => {
                 <div className="row mb-1">
                   <div className="col s3">
                     <img
+                      onClick={onClick}
                       className="avatar-img"
                       src={require("../../../../img/avatars/elf/elf1.png")}
                       alt="elf avatar"
@@ -59,6 +81,7 @@ const DescAvatars = () => {
                   </div>
                   <div className="col s3">
                     <img
+                      onClick={onClick}
                       className="avatar-img"
                       src={require("../../../../img/avatars/elf/elf2.png")}
                       alt="elf avatar"
@@ -66,6 +89,7 @@ const DescAvatars = () => {
                   </div>
                   <div className="col s3">
                     <img
+                      onClick={onClick}
                       className="avatar-img"
                       src={require("../../../../img/avatars/elf/elf3.jpeg")}
                       alt="elf avatar"
@@ -73,6 +97,7 @@ const DescAvatars = () => {
                   </div>
                   <div className="col s3">
                     <img
+                      onClick={onClick}
                       className="avatar-img"
                       src={require("../../../../img/avatars/elf/elf4.jpeg")}
                       alt="elf avatar"
@@ -83,6 +108,7 @@ const DescAvatars = () => {
                 <div className="row mb-1">
                   <div className="col s3">
                     <img
+                      onClick={onClick}
                       className="avatar-img"
                       src={require("../../../../img/avatars/halfling/halfling1.jpeg")}
                       alt="halfling avatar"
@@ -90,6 +116,7 @@ const DescAvatars = () => {
                   </div>
                   <div className="col s3">
                     <img
+                      onClick={onClick}
                       className="avatar-img"
                       src={require("../../../../img/avatars/halfling/halfling2.png")}
                       alt="halfling avatar"
@@ -97,6 +124,7 @@ const DescAvatars = () => {
                   </div>
                   <div className="col s3">
                     <img
+                      onClick={onClick}
                       className="avatar-img"
                       src={require("../../../../img/avatars/halfling/halfling3.png")}
                       alt="halfling avatar"
@@ -104,6 +132,7 @@ const DescAvatars = () => {
                   </div>
                   <div className="col s3">
                     <img
+                      onClick={onClick}
                       className="avatar-img"
                       src={require("../../../../img/avatars/halfling/halfling4.jpeg")}
                       alt="halfling avatar"
@@ -114,6 +143,7 @@ const DescAvatars = () => {
                 <div className="row mb-1">
                   <div className="col s3">
                     <img
+                      onClick={onClick}
                       className="avatar-img"
                       src={require("../../../../img/avatars/dwarf/dwarf1.png")}
                       alt="dwarf avatar"
@@ -121,6 +151,7 @@ const DescAvatars = () => {
                   </div>
                   <div className="col s3">
                     <img
+                      onClick={onClick}
                       className="avatar-img"
                       src={require("../../../../img/avatars/dwarf/dwarf2.png")}
                       alt="dwarf avatar"
@@ -128,6 +159,7 @@ const DescAvatars = () => {
                   </div>
                   <div className="col s3">
                     <img
+                      onClick={onClick}
                       className="avatar-img"
                       src={require("../../../../img/avatars/dwarf/dwarf3.png")}
                       alt="dwarf avatar"
@@ -135,6 +167,7 @@ const DescAvatars = () => {
                   </div>
                   <div className="col s3">
                     <img
+                      onClick={onClick}
                       className="avatar-img"
                       src={require("../../../../img/avatars/dwarf/dwarf4.png")}
                       alt="dwarf avatar"

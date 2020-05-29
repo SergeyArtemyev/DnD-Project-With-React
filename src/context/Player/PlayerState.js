@@ -7,6 +7,7 @@ import axios from "axios";
 const PlayerState = (props) => {
   const initialState = {
     data: null,
+    isCreated: false,
   };
 
   const [state, dispatch] = useReducer(PlayerReducer, initialState);
@@ -19,6 +20,7 @@ const PlayerState = (props) => {
       },
     };
     const res = await axios.post("http://localhost:5000/player", playerdata, config);
+    dispatch({ type: ADD_PLAYER, payload: true });
   };
 
   return (

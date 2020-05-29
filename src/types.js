@@ -6,3 +6,4 @@ export const GET_CLASS_FEATURES = "GET_CLASS_FEATURES";
 export const PUSH_LANGUAGE = "PUSH_LANGUAGE";
 export const GET_DESCRIPTION = "GET_DESCRIPTION";
 export const ADD_PLAYER = "ADD_PLAYER";
+export const GET_AVATAR = "GET_AVATAR";

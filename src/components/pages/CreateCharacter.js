@@ -1,4 +1,5 @@
 import React, { useEffect, useContext } from "react";
+import { Redirect } from "react-router-dom";
 import Race from "../layout/createCharacter/race/Race";
 import Class from "../layout/createCharacter/class/Class";
 import Abilities from "../layout/createCharacter/abilities/Abilities";
@@ -8,7 +9,7 @@ import PlayerContext from "../../context/Player/playerContext";
 
 const CreateCharacter = () => {
   const playerContext = useContext(PlayerContext);
-  const { addPlayer } = playerContext;
+  const { addPlayer, isCreated } = playerContext;
 
   useEffect(() => {
     let prev = document.querySelector(".prev");
@@ -51,7 +52,8 @@ const CreateCharacter = () => {
       }
     }
   }
-  const onSubmit = () => {
+  const onSubmit = (e) => {
+    e.preventDefault();
     let formElem = document.querySelector("form");
     new FormData(formElem);
     formElem.addEventListener("formdata", (e) => {
@@ -66,12 +68,16 @@ const CreateCharacter = () => {
     });
   };
 
+  // if (isCreated) {
+  //   return <Redirect to="/player" />;
+  // }
+
   return (
     <section id="char-create">
       <div className="container">
         <h4 className="center-align create-header">Welcome to the character creation page</h4>
         <div className="main-window">
-          <form id="creation-form" action="http://localhost:3000/player" onSubmit={onSubmit}>
+          <form id="creation-form" onSubmit={onSubmit}>
             <div className="row">
               <div className="col s12">
                 <ul className="tabs">
