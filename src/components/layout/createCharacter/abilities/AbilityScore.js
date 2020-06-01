@@ -1,5 +1,4 @@
 import React from "react";
-// import "../../../../js/abilityTable";
 
 const AbilityScore = () => {
   return (
@@ -18,7 +17,15 @@ const AbilityScore = () => {
           <tr id="strength" className="ability">
             <td>Strength</td>
             <td>
-              <input type="number" className="ability-input" id="strength-points" name="str" min="8" max="15" defaultValue="8" />
+              <input
+                type="number"
+                className="ability-input"
+                id="strength-points"
+                name="str"
+                min="8"
+                max="15"
+                defaultValue="8"
+              />
               <button type="button" className="minus">
                 <i className="material-icons minus-icon">indeterminate_check_box</i>
               </button>
@@ -37,7 +44,15 @@ const AbilityScore = () => {
           <tr id="dexterity" className="ability">
             <td>Dexterity</td>
             <td>
-              <input type="number" className="ability-input" id="dexterity-points" name="dex" min="8" max="15" defaultValue="8" />
+              <input
+                type="number"
+                className="ability-input"
+                id="dexterity-points"
+                name="dex"
+                min="8"
+                max="15"
+                defaultValue="8"
+              />
               <button type="button" className="minus">
                 <i className="material-icons minus-icon">indeterminate_check_box</i>
               </button>
@@ -56,7 +71,15 @@ const AbilityScore = () => {
           <tr id="constitution" className="ability">
             <td>Constitution</td>
             <td>
-              <input type="number" className="ability-input" id="consitution-points" name="con" min="8" max="15" defaultValue="8" />
+              <input
+                type="number"
+                className="ability-input"
+                id="consitution-points"
+                name="con"
+                min="8"
+                max="15"
+                defaultValue="8"
+              />
               <button type="button" className="minus">
                 <i className="material-icons minus-icon">indeterminate_check_box</i>
               </button>
@@ -75,7 +98,15 @@ const AbilityScore = () => {
           <tr id="intelligence" className="ability">
             <td>Intelligence</td>
             <td>
-              <input type="number" className="ability-input" id="intelligence-points" name="int" min="8" max="15" defaultValue="8" />
+              <input
+                type="number"
+                className="ability-input"
+                id="intelligence-points"
+                name="int"
+                min="8"
+                max="15"
+                defaultValue="8"
+              />
               <button type="button" className="minus">
                 <i className="material-icons minus-icon">indeterminate_check_box</i>
               </button>
@@ -94,7 +125,15 @@ const AbilityScore = () => {
           <tr id="wisdom" className="ability">
             <td>Wisdom</td>
             <td>
-              <input type="number" className="ability-input" id="wisdom-points" name="wis" min="8" max="15" defaultValue="8" />
+              <input
+                type="number"
+                className="ability-input"
+                id="wisdom-points"
+                name="wis"
+                min="8"
+                max="15"
+                defaultValue="8"
+              />
               <button type="button" className="minus">
                 <i className="material-icons minus-icon">indeterminate_check_box</i>
               </button>
@@ -113,7 +152,15 @@ const AbilityScore = () => {
           <tr id="charisma" className="ability">
             <td>Charisma</td>
             <td>
-              <input type="number" className="ability-input" id="charisma-points" name="char" min="8" max="15" defaultValue="8" />
+              <input
+                type="number"
+                className="ability-input"
+                id="charisma-points"
+                name="char"
+                min="8"
+                max="15"
+                defaultValue="8"
+              />
               <button type="button" className="minus">
                 <i className="material-icons minus-icon">indeterminate_check_box</i>
               </button>

@@ -1,17 +1,8 @@
-import React, { useReducer } from "react";
-import { ADD_PLAYER } from "../../types";
+import React from "react";
 import PlayerContext from "./playerContext";
-import PlayerReducer from "./playerReducer";
 import axios from "axios";
 
 const PlayerState = (props) => {
-  const initialState = {
-    data: null,
-    isCreated: false,
-  };
-
-  const [state, dispatch] = useReducer(PlayerReducer, initialState);
-
   // Get race and racial traits
   const addPlayer = async (playerdata) => {
     const config = {
@@ -19,14 +10,12 @@ const PlayerState = (props) => {
         "Content-Type": "Application/json",
       },
     };
-    const res = await axios.post("http://localhost:5000/player", playerdata, config);
-    dispatch({ type: ADD_PLAYER, payload: true });
+    await axios.post("http://localhost:5000/player", playerdata, config);
   };
 
   return (
     <PlayerContext.Provider
       value={{
-        data: state.data,
         addPlayer,
       }}
     >

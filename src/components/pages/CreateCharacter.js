@@ -1,5 +1,4 @@
 import React, { useEffect, useContext } from "react";
-import { Redirect } from "react-router-dom";
 import Race from "../layout/createCharacter/race/Race";
 import Class from "../layout/createCharacter/class/Class";
 import Abilities from "../layout/createCharacter/abilities/Abilities";
@@ -9,7 +8,7 @@ import PlayerContext from "../../context/Player/playerContext";
 
 const CreateCharacter = () => {
   const playerContext = useContext(PlayerContext);
-  const { addPlayer, isCreated } = playerContext;
+  const { addPlayer } = playerContext;
 
   useEffect(() => {
     let prev = document.querySelector(".prev");
@@ -68,10 +67,6 @@ const CreateCharacter = () => {
     });
     new FormData(formElem);
   };
-
-  // if (isCreated) {
-  //   return <Redirect to="/player" />;
-  // }
 
   return (
     <section id="char-create">

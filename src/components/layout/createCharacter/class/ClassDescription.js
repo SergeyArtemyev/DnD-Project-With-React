@@ -1,6 +1,15 @@
 import React, { useContext, useEffect } from "react";
 import ClassContext from "../../../../context/Class/classContext";
 import M from "materialize-css/dist/js/materialize.min.js";
+import FighterStyle from "../../../selects/FighterStyle";
+import FighterSkill from "../../../selects/FighterSkill";
+import FavoredEnemy from "../../../selects/FavoredEnemy";
+import RangerLang from "../../../selects/RangerLang";
+import NaturalExp from "../../../selects/NaturalExp";
+import RangerSkill from "../../../selects/RangerSkill";
+import Expertise from "../../../selects/Expertise";
+import RogueSkill from "../../../selects/RogueSkill";
+import SorcererSkill from "../../../selects/SorcererSkill";
 
 const ClassDescription = () => {
   const classContext = useContext(ClassContext);
@@ -59,15 +68,7 @@ const ClassDescription = () => {
   if (className === "Fighter") {
     let fightStyleSelect = (
       <>
-        <select name="fighter-style" className="browser-default">
-          <option value="none">- Choose an Option -</option>
-          <option value="Archery">Archery</option>
-          <option value="Defence">Defence</option>
-          <option value="Dueling">Dueling</option>
-          <option value="Great Weapon Fighting">Great Weapon Fighting</option>
-          <option value="Protection">Protection</option>
-          <option value="Two-Weapon Fighting">Two-Weapon Fighting</option>
-        </select>
+        <FighterStyle />
       </>
     );
     fighterDesc = (
@@ -96,66 +97,20 @@ const ClassDescription = () => {
     );
     profSelect = (
       <>
-        <select name="fighter-skill-1" className="browser-default">
-          <option value="none">- Choose a Fighter Skill -</option>
-          <option value="Acrobatics">Acrobatics</option>
-          <option value="Animal Handling">Animal Handling</option>
-          <option value="Athletics">Athletics</option>
-          <option value="History">History</option>
-          <option value="Insight">Insight</option>
-          <option value="Intimidation">Intimidation</option>
-          <option value="Perception">Perception</option>
-          <option value="Survival">Survival</option>
-        </select>
-        <br />
-        <select name="fighter-skill-2" className="browser-default">
-          <option value="none">- Choose a Fighter Skill -</option>
-          <option value="Acrobatics">Acrobatics</option>
-          <option value="Animal Handling">Animal Handling</option>
-          <option value="Athletics">Athletics</option>
-          <option value="History">History</option>
-          <option value="Insight">Insight</option>
-          <option value="Intimidation">Intimidation</option>
-          <option value="Perception">Perception</option>
-          <option value="Survival">Survival</option>
-        </select>
+        <FighterSkill />
       </>
     );
   } else if (className === "Ranger") {
     let favEnemySelect = (
       <>
-        <select name="favored-enemy" className="browser-default">
-          <option value="none">- Choose an Option -</option>
-          <option value="Beasts">Beasts</option>
-          <option value="Dragons">Dragons</option>
-          <option value="Fey">Fey</option>
-          <option value="Giants">Giants</option>
-          <option value="Humanoids">Humanoids</option>
-          <option value="Undead">Undead</option>
-        </select>
+        <FavoredEnemy />
         <br />
-        <select name="language" className="browser-default">
-          <option value="none">- Choose a Language -</option>
-          <option value="Abyssal">Abyssal</option>
-          <option value="Draconic">Draconic</option>
-          <option value="Elvish">Elvish</option>
-          <option value="Goblin">Goblin</option>
-          <option value="Halfling">Halfling</option>
-          <option value="Orc">Orc</option>
-        </select>
+        <RangerLang />
       </>
     );
     let naturExpSelect = (
       <>
-        <select name="natural-explorer" className="browser-default">
-          <option value="none">- Choose a Level 1 Option -</option>
-          <option value="Arctic">Arctic</option>
-          <option value="Coast">Coast</option>
-          <option value="Desert">Desert</option>
-          <option value="Forest">Forest</option>
-          <option value="Mountain">Mountain</option>
-          <option value="Swamp">Swamp</option>
-        </select>
+        <NaturalExp />
       </>
     );
     rangerDesc = (
@@ -186,59 +141,13 @@ const ClassDescription = () => {
     );
     profSelect = (
       <>
-        <select name="ranger-skill-1" className="browser-default">
-          <option value="none">- Choose a Ranger Skill -</option>
-          <option value="Animal Handling">Animal Handling</option>
-          <option value="Athletics">Athletics</option>
-          <option value="History">History</option>
-          <option value="Insight">Insight</option>
-          <option value="Investigation">Investigation</option>
-          <option value="Perception">Perception</option>
-          <option value="Survival">Survival</option>
-          <option value="Stealth">Stealth</option>
-        </select>
-        <br />
-        <select name="ranger-skill-2" className="browser-default">
-          <option value="none">- Choose a Ranger Skill -</option>
-          <option value="Animal Handling">Animal Handling</option>
-          <option value="Athletics">Athletics</option>
-          <option value="History">History</option>
-          <option value="Insight">Insight</option>
-          <option value="Investigation">Investigation</option>
-          <option value="Perception">Perception</option>
-          <option value="Survival">Survival</option>
-          <option value="Stealth">Stealth</option>
-        </select>
-        <br />
-        <select name="ranger-skill-3" className="browser-default">
-          <option value="none">- Choose a Ranger Skill -</option>
-          <option value="Animal Handling">Animal Handling</option>
-          <option value="Athletics">Athletics</option>
-          <option value="History">History</option>
-          <option value="Insight">Insight</option>
-          <option value="Investigation">Investigation</option>
-          <option value="Perception">Perception</option>
-          <option value="Survival">Survival</option>
-          <option value="Stealth">Stealth</option>
-        </select>
+        <RangerSkill />
       </>
     );
   } else if (className === "Rogue") {
     let expertiseSelect = (
       <>
-        <select name="expertise-1" className="browser-default">
-          <option value="none">- Choose Rouge Expertise -</option>
-          <option value="Deception">Deception</option>
-          <option value="Stealth">Stealth</option>
-          <option value="Thieves' Tools">Thieves' Tools</option>
-        </select>
-        <br />
-        <select name="expertise-2" className="browser-default">
-          <option value="none">- Choose Rouge Expertise -</option>
-          <option value="Deception">Deception</option>
-          <option value="Stealth">Stealth</option>
-          <option value="Thieves' Tools">Thieves' Tools</option>
-        </select>
+        <Expertise />
       </>
     );
     rogueDesc = (
@@ -276,65 +185,7 @@ const ClassDescription = () => {
     );
     profSelect = (
       <>
-        <select name="rogue-skill-1" className="browser-default">
-          <option value="none">- Choose a rogue Skill -</option>
-          <option value="Acrobatics">Acrobatics</option>
-          <option value="Athletics">Athletics</option>
-          <option value="Deception">Deception</option>
-          <option value="Insight">Insight</option>
-          <option value="Intimidation">Intimidation</option>
-          <option value="Investigation">Investigation</option>
-          <option value="Perception">Perception</option>
-          <option value="Performance">Performance</option>
-          <option value="Persuasion">Persuasion</option>
-          <option value="Slight Of Hand">Slight Of Hand</option>
-          <option value="Stealth">Stealth</option>
-        </select>
-        <br />
-        <select name="rogue-skill-2" className="browser-default">
-          <option value="none">- Choose a rogue Skill -</option>
-          <option value="Acrobatics">Acrobatics</option>
-          <option value="Athletics">Athletics</option>
-          <option value="Deception">Deception</option>
-          <option value="Insight">Insight</option>
-          <option value="Intimidation">Intimidation</option>
-          <option value="Investigation">Investigation</option>
-          <option value="Perception">Perception</option>
-          <option value="Performance">Performance</option>
-          <option value="Persuasion">Persuasion</option>
-          <option value="Slight Of Hand">Slight Of Hand</option>
-          <option value="Stealth">Stealth</option>
-        </select>
-        <br />
-        <select name="rogue-skill-3" className="browser-default">
-          <option value="none">- Choose a rogue Skill -</option>
-          <option value="Acrobatics">Acrobatics</option>
-          <option value="Athletics">Athletics</option>
-          <option value="Deception">Deception</option>
-          <option value="Insight">Insight</option>
-          <option value="Intimidation">Intimidation</option>
-          <option value="Investigation">Investigation</option>
-          <option value="Perception">Perception</option>
-          <option value="Performance">Performance</option>
-          <option value="Persuasion">Persuasion</option>
-          <option value="Slight Of Hand">Slight Of Hand</option>
-          <option value="Stealth">Stealth</option>
-        </select>
-        <br />
-        <select name="rogue-skill-4" className="browser-default">
-          <option value="none">- Choose a rogue Skill -</option>
-          <option value="Acrobatics">Acrobatics</option>
-          <option value="Athletics">Athletics</option>
-          <option value="Deception">Deception</option>
-          <option value="Insight">Insight</option>
-          <option value="Intimidation">Intimidation</option>
-          <option value="Investigation">Investigation</option>
-          <option value="Perception">Perception</option>
-          <option value="Performance">Performance</option>
-          <option value="Persuasion">Persuasion</option>
-          <option value="Slight Of Hand">Slight Of Hand</option>
-          <option value="Stealth">Stealth</option>
-        </select>
+        <RogueSkill />
       </>
     );
   } else if (className === "Sorcerer") {
@@ -361,25 +212,7 @@ const ClassDescription = () => {
     );
     profSelect = (
       <>
-        <select name="sorcerer-skill-1" className="browser-default">
-          <option value="none">- Choose a Sorcerer Skill -</option>
-          <option value="Arcana">Arcana</option>
-          <option value="Deception">Deception</option>
-          <option value="Insight">Insight</option>
-          <option value="Intimidation">Intimidation</option>
-          <option value="Persuasion">Persuasion</option>
-          <option value="Religion">Religion</option>
-        </select>
-        <br />
-        <select name="sorcerer-skill-2" className="browser-default">
-          <option value="none">- Choose a Sorcerer Skill -</option>
-          <option value="Arcana">Arcana</option>
-          <option value="Deception">Deception</option>
-          <option value="Insight">Insight</option>
-          <option value="Intimidation">Intimidation</option>
-          <option value="Persuasion">Persuasion</option>
-          <option value="Religion">Religion</option>
-        </select>
+        <SorcererSkill />
       </>
     );
   }
