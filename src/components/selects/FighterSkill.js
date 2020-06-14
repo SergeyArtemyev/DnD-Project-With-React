@@ -3,7 +3,7 @@ import React from "react";
 const FighterSkill = () => {
   return (
     <>
-      <select name="fighter-skill-1" className="browser-default">
+      <select name="fighterSkill1" className="browser-default">
         <option value="none">- Choose a Fighter Skill -</option>
         <option value="Acrobatics">Acrobatics</option>
         <option value="Animal Handling">Animal Handling</option>
@@ -15,7 +15,7 @@ const FighterSkill = () => {
         <option value="Survival">Survival</option>
       </select>
       <br />
-      <select name="fighter-skill-2" className="browser-default">
+      <select name="fighterSkill2" className="browser-default">
         <option value="none">- Choose a Fighter Skill -</option>
         <option value="Acrobatics">Acrobatics</option>
         <option value="Animal Handling">Animal Handling</option>

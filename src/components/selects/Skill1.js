@@ -3,7 +3,7 @@ import React from "react";
 const Skill1 = () => {
   return (
     <>
-      <select name="skill-1" className="browser-default">
+      <select name="skill1" className="browser-default">
         <option value="none">- Choose a Skill -</option>
         <option value="Arcana">Arcana</option>
         <option value="Investigation">Investigation</option>

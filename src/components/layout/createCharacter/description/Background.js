@@ -29,7 +29,7 @@ const Background = () => {
     <>
       <div className="row">
         <div className="input-field col s4">
-          <select className="browser-default" onChange={onChange}>
+          <select className="browser-default" name="background" onChange={onChange}>
             <option value="">--Choose your background--</option>
             <option value="Acolyte">Acolyte</option>
             <option value="Criminal or Spy">Criminal/Spy</option>

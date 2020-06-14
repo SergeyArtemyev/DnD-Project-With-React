@@ -3,7 +3,7 @@ import React from "react";
 const FavoredEnemy = () => {
   return (
     <>
-      <select name="favored-enemy" className="browser-default">
+      <select name="favoredEnemy" className="browser-default">
         <option value="none">- Choose an Option -</option>
         <option value="Beasts">Beasts</option>
         <option value="Dragons">Dragons</option>

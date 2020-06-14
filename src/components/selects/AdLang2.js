@@ -6,7 +6,7 @@ const AdLang2 = () => {
       <li>
         <label>Languages:</label>
         <br />
-        <select name="ad-language-2" className="browser-default">
+        <select name="adLanguage2" className="browser-default">
           <option value="none">- Choose a Language -</option>
           <option value="Abyssal">Abyssal</option>
           <option value="Draconic">Draconic</option>

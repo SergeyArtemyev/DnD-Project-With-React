@@ -1,12 +1,87 @@
 function abilityScoreFunction() {
   let checkfortotal; // Helper variable
   let remainingPoints = 27;
+  // Set Default Ability score table
+  let races = document.getElementById("race");
+  let raceBonus = document.getElementsByClassName("race-bonus");
+  let total = document.getElementsByClassName("total");
+  let input = document.getElementsByClassName("ability-input");
+  let plus = document.getElementsByClassName("plus-icon");
+  let minus = document.getElementsByClassName("minus-icon");
+
+  if (races.value === "Human") {
+    for (let i = 0; i < raceBonus.length; i++) {
+      remainingPoints = 27;
+      document.getElementsByClassName("remaining-points")[0].innerHTML = remainingPoints;
+      minus[i].style.visibility = "hidden";
+      plus[i].style.visibility = "visible";
+      // plus[i].style.display = "inline-block";
+      input[i].value = "8";
+      let ability = document.getElementsByClassName("ability");
+      if (ability[i]) {
+        raceBonus[i].innerHTML = "+1";
+        total[i].value = "9";
+        document.getElementsByClassName("modifier")[i].value = modifier(i);
+      }
+    }
+  } else if (races.value === "Elf") {
+    for (let i = 0; i < raceBonus.length; i++) {
+      remainingPoints = 27;
+      document.getElementsByClassName("remaining-points")[0].innerHTML = remainingPoints;
+      minus[i].style.visibility = "hidden";
+      plus[i].style.visibility = "visible";
+      // plus[i].style.display = "inline-block";
+      input[i].value = "8";
+      raceBonus[i].innerHTML = "-";
+      total[i].value = "8";
+      document.getElementsByClassName("modifier")[i].value = modifier(i);
+      if (raceBonus[i].parentElement.id === "dexterity") {
+        raceBonus[i].innerHTML = "+2";
+        total[i].value = "10";
+        document.getElementsByClassName("modifier")[i].value = modifier(i);
+      }
+    }
+  } else if (races.value === "Halfling") {
+    for (let i = 0; i < raceBonus.length; i++) {
+      remainingPoints = 27;
+      document.getElementsByClassName("remaining-points")[0].innerHTML = remainingPoints;
+      minus[i].style.visibility = "hidden";
+      plus[i].style.visibility = "visible";
+      // plus[i].style.display = "inline-block";
+      input[i].value = "8";
+      raceBonus[i].innerHTML = "-";
+      total[i].value = "8";
+      document.getElementsByClassName("modifier")[i].value = modifier(i);
+      if (raceBonus[i].parentElement.id === "dexterity") {
+        raceBonus[i].innerHTML = "+2";
+        total[i].value = "10";
+        document.getElementsByClassName("modifier")[i].value = modifier(i);
+      }
+    }
+  } else {
+    for (let i = 0; i < raceBonus.length; i++) {
+      remainingPoints = 27;
+      document.getElementsByClassName("remaining-points")[0].innerHTML = remainingPoints;
+      minus[i].style.visibility = "hidden";
+      plus[i].style.visibility = "visible";
+      // plus[i].style.display = "inline-block";
+      input[i].value = "8";
+      raceBonus[i].innerHTML = "-";
+      total[i].value = "8";
+      document.getElementsByClassName("modifier")[i].value = modifier(i);
+      if (raceBonus[i].parentElement.id === "constitution") {
+        raceBonus[i].innerHTML = "+2";
+        total[i].value = "10";
+        document.getElementsByClassName("modifier")[i].value = modifier(i);
+      }
+    }
+  }
 
   document.getElementsByClassName("remaining-points")[0].innerHTML = remainingPoints;
-
+  // Вот тут узнать про накапливание!!!!!!!!!!!!!!!
   let ability = document.getElementsByClassName("ability");
   for (let i = 0; i < ability.length; i++) {
-    ability[i].addEventListener("click", function (e) {
+    ability[i].onclick = function (e) {
       let description = document.getElementsByClassName("ability-description")[0];
       if (e.target.parentElement.id === "strength") {
         description.innerHTML = `
@@ -59,7 +134,7 @@ function abilityScoreFunction() {
       if (e.target.parentElement === minusBtn) {
         minusAbility(i);
       }
-    });
+    };
   }
   // function for a + button
   function plusAbility(i) {

@@ -19,7 +19,12 @@ const CreateCharacter = () => {
     let links = document.querySelector(".tabs").getElementsByTagName("a");
     let next = document.querySelector(".next");
     let prev = document.querySelector(".prev");
+    let submit = document.querySelector("button[type='submit'");
     for (let i = 0; i < links.length; i++) {
+      if (i > 0) {
+        prev.style.marginRight = "unset";
+        submit.style.display = "none";
+      }
       if (i === 1) {
         prev.style.display = "none";
       } else {
@@ -37,10 +42,16 @@ const CreateCharacter = () => {
     let links = document.querySelector(".tabs").getElementsByTagName("a");
     let next = document.querySelector(".next");
     let prev = document.querySelector(".prev");
+    let submit = document.querySelector("button[type='submit'");
+
     for (let i = 0; i < links.length; i++) {
+      if (i === links.length - 2) {
+        prev.style.marginRight = "92px";
+      }
       if (links[i].classList.contains("active")) {
         if (i === 3) {
           next.style.display = "none";
+          submit.style.display = "inline-block";
         } else {
           next.style.display = "inline-block";
           prev.style.display = "inline-block";
@@ -77,7 +88,7 @@ const CreateCharacter = () => {
             <div className="row">
               <div className="col s12">
                 <ul className="tabs">
-                  <li className="tab col s2  offset-s1">
+                  <li className="tab col s2 offset-s1">
                     <a className="active" href="#test1">
                       Race
                     </a>
@@ -86,9 +97,7 @@ const CreateCharacter = () => {
                     <a href="#test2">Class</a>
                   </li>
                   <li className="tab col s2">
-                    <a className="test" href="#test3">
-                      Ability
-                    </a>
+                    <a href="#test3">Ability</a>
                   </li>
                   <li className="tab col s2">
                     <a href="#test4">Description</a>
@@ -112,9 +121,9 @@ const CreateCharacter = () => {
               </div>
               <div id="test5" className="col s12">
                 <Equipment />
+                <button type="submit">Submit</button>
               </div>
             </div>
-            <button type="submit">Submit</button>
           </form>
           <div className="form-btns">
             <button className="prev" onClick={prev}>

@@ -3,7 +3,7 @@ import React from "react";
 const RangerSkill = () => {
   return (
     <>
-      <select name="ranger-skill-1" className="browser-default">
+      <select name="rangerSkill1" className="browser-default">
         <option value="none">- Choose a Ranger Skill -</option>
         <option value="Animal Handling">Animal Handling</option>
         <option value="Athletics">Athletics</option>
@@ -15,7 +15,7 @@ const RangerSkill = () => {
         <option value="Stealth">Stealth</option>
       </select>
       <br />
-      <select name="ranger-skill-2" className="browser-default">
+      <select name="rangerSkill2" className="browser-default">
         <option value="none">- Choose a Ranger Skill -</option>
         <option value="Animal Handling">Animal Handling</option>
         <option value="Athletics">Athletics</option>
@@ -27,7 +27,7 @@ const RangerSkill = () => {
         <option value="Stealth">Stealth</option>
       </select>
       <br />
-      <select name="ranger-skill-3" className="browser-default">
+      <select name="rangerSkill3" className="browser-default">
         <option value="none">- Choose a Ranger Skill -</option>
         <option value="Animal Handling">Animal Handling</option>
         <option value="Athletics">Athletics</option>

@@ -1,6 +1,9 @@
 body {
   font-family: "Permanent Marker", cursive;
 }
+.underline {
+  text-decoration: underline;
+}
 .main-bg {
   background: #ee5b60;
 }
@@ -252,7 +255,7 @@ input[type="number"]::-webkit-outer-spin-button {
   cursor: pointer;
   position: relative;
 }
-.avatar img {
+.avatar .main-avatar {
   filter: blur(2px);
 }
 .img-icon {
@@ -297,7 +300,8 @@ input[type="number"]::-webkit-outer-spin-button {
   bottom: 1rem;
   right: 1rem;
 }
-.form-btns button {
+.form-btns button,
+#char-create button[type="submit"] {
   border: none;
   background: #ee5b60;
   padding: 0.4rem 1rem 0.3rem;
@@ -307,9 +311,10 @@ input[type="number"]::-webkit-outer-spin-button {
   border-radius: 10px;
   cursor: pointer;
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.63);
-  transition: all 0.2s ease-in;
+  transition: background 0.2s ease-in;
 }
-.form-btns button:hover {
+.form-btns button:hover,
+#char-create button[type="submit"]:hover {
   background: #e7585d;
 }
 .form-btns span {
@@ -318,4 +323,76 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 .form-btns i {
   text-shadow: 0 0 3px #000;
+}
+#char-create button[type="submit"] {
+  display: none;
+  position: relative;
+  z-index: 3;
+  left: 76.5rem;
+  bottom: -1.27rem;
+  text-shadow: 0 0 3px #000;
+  padding: 0.7rem 1rem;
+}
+/* Character sheet */
+#character-sheet {
+  padding: 2rem 0;
+  background: url("./img/body-background3.jpg") no-repeat center center/cover;
+  background-attachment: fixed;
+}
+#character-sheet .heading {
+  background: #fff;
+}
+#character-sheet .avatar {
+  cursor: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 149px;
+}
+#character-sheet img {
+  width: 100px;
+  height: 100px;
+}
+#character-sheet .heading .name {
+  margin-left: 1rem;
+  display: inline-block;
+  padding: 0.7rem 0.9rem;
+  background: #ccc;
+  border-radius: 10px;
+}
+/* Ability points */
+.ab-point {
+  text-align: center;
+  margin-bottom: 1rem;
+  background: #fff;
+}
+.ab-point p:first-child {
+  margin-top: 0;
+  padding-top: 1rem;
+}
+.ab-border {
+  border: 1px solid #ccc;
+  border-radius: 45%;
+  width: 60px;
+  margin: 0 auto;
+  background: #e7585d;
+  color: #fff;
+}
+.prof-bonus {
+  background: #fff;
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+.savings {
+  background: #fff;
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+/* Ac-init-speed-hp */
+.ac,
+.init,
+.speed,
+.hp {
+  background: #fff;
+  padding: 1rem;
 }

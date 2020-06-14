@@ -1,4 +1,4 @@
-import { ADD_PLAYER } from "../../types";
+import { ADD_PLAYER, GET_CHAR_DATA } from "../../types";
 
 export default (state, action) => {
   switch (action.type) {
@@ -6,6 +6,11 @@ export default (state, action) => {
       return {
         ...state,
         isCreated: action.payload,
+      };
+    case GET_CHAR_DATA:
+      return {
+        ...state,
+        playerData: action.payload,
       };
     default:
       return state;

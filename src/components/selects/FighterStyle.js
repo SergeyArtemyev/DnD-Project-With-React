@@ -3,7 +3,7 @@ import React from "react";
 const FighterStyle = () => {
   return (
     <>
-      <select name="fighter-style" className="browser-default">
+      <select name="fighterStyle" className="browser-default">
         <option value="none">- Choose an Option -</option>
         <option value="Archery">Archery</option>
         <option value="Defence">Defence</option>

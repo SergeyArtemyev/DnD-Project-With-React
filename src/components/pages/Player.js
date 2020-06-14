@@ -1,16 +1,41 @@
-import React from "react";
+import React, { useState } from "react";
+import Heading from "../layout/player/Heading";
+import AbilityPoints from "../layout/player/AbilityPoints";
+import Savings from "../layout/player/Savings";
+import AcInitSpeed from "../layout/player/AcInitSpeed";
+import Features from "../layout/player/Features";
+import Skills from "../layout/player/Skills";
 
 const Player = () => {
-  // window.onload = function () {
-  //   let searchParams = new URLSearchParams(window.location.search);
-  //   let words = [];
-  //   for (let pair of searchParams.entries()) {
-  //     words.push([pair[0], pair[1]]);
-  //   }
-  //   let data = Object.fromEntries(words);
-  //   console.log(JSON.stringify(data));
-  // };
-  return <div>hello</div>;
+  const [data, setData] = useState({ array: [] });
+
+  return (
+    <section id="character-sheet">
+      <div className="container">
+        <div className="row">
+          <div className="col s12">
+            <Heading />
+          </div>
+        </div>
+        <div className="row">
+          <div className="col s2">
+            <AbilityPoints />
+          </div>
+          <div className="col s4">
+            <div className="prof-bonus">
+              <span>+2</span> proficiency bonus
+            </div>
+            <Savings />
+            <Skills data={data} />
+          </div>
+          <div className="col s6">
+            <AcInitSpeed />
+            <Features data={data} setData={setData} />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default Player;

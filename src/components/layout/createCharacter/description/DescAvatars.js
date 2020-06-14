@@ -6,7 +6,6 @@ const DescAvatars = () => {
   const backgroundContext = useContext(BackgroundContext);
   const { getAvatar } = backgroundContext;
   const [mainAvatar, setMainAvatar] = useState(require("../../../../img/avatars/avatar.png"));
-
   useEffect(() => {
     chooseAvatar();
     getAvatar(mainAvatar);
@@ -26,6 +25,13 @@ const DescAvatars = () => {
           <a className="modal-trigger avatar col s3" href="#modal1">
             <img className="main-avatar" src={mainAvatar} alt="avatar" />
             <i className="material-icons img-icon">add</i>
+            <input
+              name="avatar"
+              type="text"
+              value={mainAvatar}
+              style={{ visibility: "hidden" }}
+              readOnly
+            ></input>
           </a>
           {/* Modal Structure */}
           <div id="modal1" className="modal">
@@ -178,7 +184,13 @@ const DescAvatars = () => {
             </div>
           </div>
           <div className="input-field col s9">
-            <input placeholder="Write your name" id="char_name" type="text" className="validate" />
+            <input
+              placeholder="Write your name"
+              id="char_name"
+              name="charName"
+              type="text"
+              className="validate"
+            />
             <label htmlFor="char_name">Character Name</label>
           </div>
         </div>

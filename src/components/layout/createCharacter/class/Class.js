@@ -42,7 +42,7 @@ const Class = () => {
           <div className="row">
             <div className="col m6 s6">
               <div className="input-fields col s12 m12">
-                <select className="icons" name="class" onChange={onChange}>
+                <select className="icons" name="playerClass" onChange={onChange}>
                   <option value="" defaultValue>
                     Choose Class
                   </option>

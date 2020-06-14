@@ -7,3 +7,4 @@ export const PUSH_LANGUAGE = "PUSH_LANGUAGE";
 export const GET_DESCRIPTION = "GET_DESCRIPTION";
 export const ADD_PLAYER = "ADD_PLAYER";
 export const GET_AVATAR = "GET_AVATAR";
+export const GET_CHAR_DATA = "GET_CHAR_DATA";

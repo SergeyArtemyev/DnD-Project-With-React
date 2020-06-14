@@ -3,7 +3,7 @@ import React from "react";
 const RogueSkill = () => {
   return (
     <>
-      <select name="rogue-skill-1" className="browser-default">
+      <select name="rogueSkill1" className="browser-default">
         <option value="none">- Choose a rogue Skill -</option>
         <option value="Acrobatics">Acrobatics</option>
         <option value="Athletics">Athletics</option>
@@ -18,7 +18,7 @@ const RogueSkill = () => {
         <option value="Stealth">Stealth</option>
       </select>
       <br />
-      <select name="rogue-skill-2" className="browser-default">
+      <select name="rogueSkill2" className="browser-default">
         <option value="none">- Choose a rogue Skill -</option>
         <option value="Acrobatics">Acrobatics</option>
         <option value="Athletics">Athletics</option>
@@ -33,7 +33,7 @@ const RogueSkill = () => {
         <option value="Stealth">Stealth</option>
       </select>
       <br />
-      <select name="rogue-skill-3" className="browser-default">
+      <select name="rogueSkill3" className="browser-default">
         <option value="none">- Choose a rogue Skill -</option>
         <option value="Acrobatics">Acrobatics</option>
         <option value="Athletics">Athletics</option>
@@ -48,7 +48,7 @@ const RogueSkill = () => {
         <option value="Stealth">Stealth</option>
       </select>
       <br />
-      <select name="rogue-skill-4" className="browser-default">
+      <select name="rogueSkill4" className="browser-default">
         <option value="none">- Choose a rogue Skill -</option>
         <option value="Acrobatics">Acrobatics</option>
         <option value="Athletics">Athletics</option>

@@ -35,10 +35,10 @@ const AbilityScore = () => {
             </td>
             <td className="race-bonus">+1</td>
             <td>
-              <input name="str-mod" className="modifier hidden-input" defaultValue="-1" />
+              <input name="strMod" className="modifier hidden-input" defaultValue="-1" />
             </td>
             <td>
-              <input name="strength-points" className="total hidden-input" defaultValue="9" />
+              <input name="strengthPoints" className="total hidden-input" defaultValue="9" />
             </td>
           </tr>
           <tr id="dexterity" className="ability">
@@ -62,10 +62,10 @@ const AbilityScore = () => {
             </td>
             <td className="race-bonus">+1</td>
             <td>
-              <input name="dex-mod" className="modifier hidden-input" defaultValue="-1" />
+              <input name="dexMod" className="modifier hidden-input" defaultValue="-1" />
             </td>
             <td>
-              <input name="dexterity-points" className="total hidden-input" defaultValue="9" />
+              <input name="dexterityPoints" className="total hidden-input" defaultValue="9" />
             </td>
           </tr>
           <tr id="constitution" className="ability">
@@ -89,10 +89,10 @@ const AbilityScore = () => {
             </td>
             <td className="race-bonus">+1</td>
             <td>
-              <input name="con-mod" className="modifier hidden-input" defaultValue="-1" />
+              <input name="conMod" className="modifier hidden-input" defaultValue="-1" />
             </td>
             <td>
-              <input name="constitution-points" className="total hidden-input" defaultValue="9" />
+              <input name="constitutionPoints" className="total hidden-input" defaultValue="9" />
             </td>
           </tr>
           <tr id="intelligence" className="ability">
@@ -116,10 +116,10 @@ const AbilityScore = () => {
             </td>
             <td className="race-bonus">+1</td>
             <td>
-              <input name="int-mod" className="modifier hidden-input" defaultValue="-1" />
+              <input name="intMod" className="modifier hidden-input" defaultValue="-1" />
             </td>
             <td>
-              <input name="intelligence-points" className="total hidden-input" defaultValue="9" />
+              <input name="intelligencePoints" className="total hidden-input" defaultValue="9" />
             </td>
           </tr>
           <tr id="wisdom" className="ability">
@@ -143,10 +143,10 @@ const AbilityScore = () => {
             </td>
             <td className="race-bonus">+1</td>
             <td>
-              <input name="wis-mod" className="modifier hidden-input" defaultValue="-1" />
+              <input name="wisMod" className="modifier hidden-input" defaultValue="-1" />
             </td>
             <td>
-              <input name="wisdom-points" className="total hidden-input" defaultValue="9" />
+              <input name="wisdomPoints" className="total hidden-input" defaultValue="9" />
             </td>
           </tr>
           <tr id="charisma" className="ability">
@@ -170,10 +170,10 @@ const AbilityScore = () => {
             </td>
             <td className="race-bonus">+1</td>
             <td>
-              <input name="char-mod" className="modifier hidden-input" defaultValue="-1" />
+              <input name="charMod" className="modifier hidden-input" defaultValue="-1" />
             </td>
             <td>
-              <input name="charisma-points" className="total hidden-input" defaultValue="9" />
+              <input name="charismaPoints" className="total hidden-input" defaultValue="9" />
             </td>
           </tr>
         </tbody>

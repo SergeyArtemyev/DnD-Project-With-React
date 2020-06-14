@@ -7,6 +7,8 @@ import dwarf from "../../../../img/form_img/dwarf.jpg";
 import RaceTraits from "./RaceTraits";
 import RaceDescription from "./RaceDescription";
 
+import abilityScoreFunction from "../../../../js/abilityScoreFunction";
+
 const Race = () => {
   const raceContext = useContext(RaceContext);
   const [racePicture, setRacePicture] = useState("");
@@ -15,9 +17,12 @@ const Race = () => {
 
   useEffect(() => {
     getRace(racePicture);
+    abilityScoreFunction();
+    console.log(2);
+
     // eslint-disable-next-line
   }, [racePicture]);
-
+  console.log(1);
   const onChange = (e) => {
     setRacePicture(e.target.value);
   };
@@ -43,7 +48,7 @@ const Race = () => {
           <div className="row">
             <div className="col m6 s6">
               <div className="input-fields col s12 m12">
-                <select onChange={onChange} name="race" className="icons">
+                <select onChange={onChange} name="race" id="race" className="icons">
                   <option value="" defaultValue>
                     Choose Race
                   </option>
