@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import PlayerContext from "../../../context/Player/playerContext";
 
-const ClassFeature = () => {
+const ClassFeature = ({ data, setData }) => {
   const playerContext = useContext(PlayerContext);
 
   useEffect(() => {
@@ -32,6 +32,20 @@ const ClassFeature = () => {
     },
     getCharData,
   } = playerContext;
+
+  useEffect(() => {
+    if (playerClass !== undefined) {
+      switch (playerClass) {
+        case "Rogue":
+          data.array.push(...data.array, rogueSkill1, rogueSkill2, rogueSkill3, rogueSkill4);
+          return setData({ ...data });
+        default:
+          return console.log("error");
+      }
+    }
+
+    // eslint-disable-next-line
+  }, [playerClass]);
 
   let classFeatures;
   if (playerClass === "Fighter") {

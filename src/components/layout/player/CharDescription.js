@@ -8,11 +8,6 @@ const CharDescription = ({ data, setData }) => {
   const playerContext = useContext(PlayerContext);
   const backgroundContext = useContext(BackgroundContext);
 
-  // useEffect(() => {
-  //   getCharData();
-  //   // eslint-disable-next-line
-  // }, []);
-
   const {
     getBackground,
     description: { info, skillProff },
@@ -34,14 +29,22 @@ const CharDescription = ({ data, setData }) => {
     },
     getCharData,
   } = playerContext;
+
   useEffect(() => {
     getCharData();
     background !== undefined ? getBackground(background) : console.log("waiting");
+    // eslint-disable-next-line
+  }, [background]);
+  // ДОБАВИТЬ БОЛЬШЕ КЕЙСОВ
+
+  useEffect(() => {
     if (skillProff) {
-      setData({ array: skillProff });
+      data.array.push(...skillProff);
+      data.ready = true;
+      setData({ ...data });
     }
     // eslint-disable-next-line
-  }, [background, skillProff]);
+  }, [skillProff]);
 
   return (
     <div className="description white">

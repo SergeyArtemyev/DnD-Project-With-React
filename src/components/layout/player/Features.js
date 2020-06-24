@@ -27,7 +27,7 @@ const Features = ({ data, setData }) => {
         </ul>
       </div>
       <div id="test1" className="col s12">
-        <ClassFeature />
+        <ClassFeature data={data} setData={setData} />
         <RacialTraits />
       </div>
       <div id="test2" className="col s12">

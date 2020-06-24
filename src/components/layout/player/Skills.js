@@ -4,36 +4,28 @@ import PlayerContext from "../../../context/Player/playerContext";
 const Skills = ({ data }) => {
   const playerContext = useContext(PlayerContext);
 
-  useEffect(() => {
-    getCharData();
-
-    // const prof = document.getElementsByClassName("profskills");
-    // const skill = document.getElementsByClassName("skill");
-    // for (let i = 0; i < skill.length; i++) {
-    //   for (let j = 0; j < prof.length; j++) {
-    //     if (skill[i].innerHTML === prof[j].innerHTML) {
-    //       skill[i].previousElementSibling.innerHTML =
-    //         parseInt(skill[i].previousElementSibling.innerHTML) + 2;
-    //       skill[i].previousElementSibling.previousElementSibling.classList.add("prof-y");
-    //     }
-    //   }
-    // }
-    // eslint-disable-next-line
-  }, []);
-  // Работает!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
-  console.log(data);
   const {
     playerData: { strMod, dexMod, intMod, charMod, wisMod },
     getCharData,
   } = playerContext;
+
+  useEffect(() => {
+    getCharData();
+    // eslint-disable-next-line
+  }, []);
+  // Работает!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  // Написать инклюдс всем и удалить тру
+
+  console.log(data);
+
   return (
     <div className="skills white">
       <p>
         <span className="circle"></span>
         <span className="dex underline">
-          {dexMod}
-        </span> <span className="skill">Acrobatics</span> <span className="ab-skill">(Dex)</span>
+          {data.array.includes("Acrobatics") ? +dexMod + 2 : dexMod}
+        </span>{" "}
+        <span className="skill">Acrobatics</span> <span className="ab-skill">(Dex)</span>
       </p>
       <p>
         <span className="circle"></span>

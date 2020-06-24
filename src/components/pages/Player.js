@@ -7,8 +7,7 @@ import Features from "../layout/player/Features";
 import Skills from "../layout/player/Skills";
 
 const Player = () => {
-  const [data, setData] = useState({ array: [] });
-
+  const [data, setData] = useState({ array: [], ready: false });
   return (
     <section id="character-sheet">
       <div className="container">
