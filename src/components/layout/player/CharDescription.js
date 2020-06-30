@@ -35,25 +35,23 @@ const CharDescription = ({ data, setData }) => {
     background !== undefined ? getBackground(background) : console.log("waiting");
     // eslint-disable-next-line
   }, [background]);
-  // ДОБАВИТЬ БОЛЬШЕ КЕЙСОВ
 
   useEffect(() => {
     if (skillProff) {
       data.array.push(...skillProff);
-      data.ready = true;
       setData({ ...data });
     }
     // eslint-disable-next-line
   }, [skillProff]);
 
   return (
-    <div className="description white">
+    <div>
       <h3>Background</h3>
-      <p className="underline">{background}</p>
+      <p className="main-color underline">{background}</p>
       <p>{info}</p>
       {background === "Haunted One" ? null : (
         <>
-          <p className="underline">Proficiency</p>
+          <p className="main-color underline">Proficiency</p>
           <ul>
             {skillProff !== undefined
               ? skillProff.map((skill) => (
@@ -67,7 +65,7 @@ const CharDescription = ({ data, setData }) => {
         </>
       )}
 
-      <p className="underline">Characteristics</p>
+      <p className="main-color underline">Characteristics</p>
       <table>
         <thead>
           <tr>
@@ -87,7 +85,7 @@ const CharDescription = ({ data, setData }) => {
             <td>{height}</td>
           </tr>
           <tr>
-            <td className="pt-1"></td>
+            <td style={{ border: "none" }}></td>
           </tr>
         </tbody>
         <thead>

@@ -36,24 +36,32 @@ const Savings = () => {
   return (
     <div className="savings">
       <p>
-        <span>{(strMod !== undefined ? +strMod : null) + getSaving().s}</span> Strength
+        <span className="underline">{(strMod !== undefined ? +strMod : null) + getSaving().s}</span>{" "}
+        Strength
       </p>
       <p>
-        <span>{(dexMod !== undefined ? +dexMod : null) + getSaving().d}</span> Dexterity
+        <span className="underline">{(dexMod !== undefined ? +dexMod : null) + getSaving().d}</span>{" "}
+        Dexterity
       </p>
       <p>
-        <span>{(conMod !== undefined ? +conMod : null) + getSaving().c}</span> Constitution
+        <span className="underline">{(conMod !== undefined ? +conMod : null) + getSaving().c}</span>{" "}
+        Constitution
       </p>
       <p>
-        <span>{(intMod !== undefined ? +intMod : null) + getSaving().i}</span> Intelligence
+        <span className="underline">{(intMod !== undefined ? +intMod : null) + getSaving().i}</span>{" "}
+        Intelligence
       </p>
       <p>
-        <span>{(wisMod !== undefined ? +wisMod : null) + getSaving().w}</span> Wisdom
+        <span className="underline">{(wisMod !== undefined ? +wisMod : null) + getSaving().w}</span>{" "}
+        Wisdom
       </p>
       <p>
-        <span>{(charMod !== undefined ? +charMod : null) + getSaving().ch}</span> Charisma
+        <span className="underline">
+          {(charMod !== undefined ? +charMod : null) + getSaving().ch}
+        </span>{" "}
+        Charisma
       </p>
-      <p>saving throws</p>
+      <p className="main-color underline center-align">saving throws</p>
     </div>
   );
 };

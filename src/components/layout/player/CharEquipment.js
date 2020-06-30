@@ -15,22 +15,22 @@ const CharEquipment = () => {
   } = playerContext;
 
   return (
-    <div className="equipment white">
+    <div>
       <h3>Your starting equipment</h3>
-      <p className="underline">Main Weapon</p>
-      <ul>
+      <p className="main-color underline">Main Weapon</p>
+      <ul className="browser-default">
         <li>{mWeapon}</li>
       </ul>
-      <p className="underline">Secondary Weapon</p>
-      <ul>
+      <p className="main-color underline">Secondary Weapon</p>
+      <ul className="browser-default">
         <li>{sWeapon}</li>
       </ul>
-      <p className="underline">Potions</p>
-      <ul>
+      <p className="main-color underline">Potions</p>
+      <ul className="browser-default">
         <li>{potions}</li>
       </ul>
-      <p className="underline">Other Stuff</p>
-      <ul>
+      <p className="main-color underline">Other Stuff</p>
+      <ul className="browser-default">
         <li>{stuff}</li>
       </ul>
     </div>

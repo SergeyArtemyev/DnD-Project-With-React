@@ -37,25 +37,25 @@ const AcInitSpeed = () => {
     <div className="row ac-init-speed">
       <div className="col s3">
         <div className="ac center-align">
-          <p>15</p>
+          <p className="underline">15</p>
           <p>ac</p>
         </div>
       </div>
       <div className="col s3">
         <div className="init center-align">
-          <p>{dexMod}</p>
+          <p className="underline">{dexMod}</p>
           <p>init</p>
         </div>
       </div>
       <div className="col s3">
         <div className="speed center-align">
-          <p>{getAcInSpHp().speed} ft</p>
+          <p className="underline">{getAcInSpHp().speed} ft</p>
           <p>speed</p>
         </div>
       </div>
       <div className="col s3">
         <div className="hp center-align">
-          <p>{getAcInSpHp().hp}</p>
+          <p className="underline">{getAcInSpHp().hp}</p>
           <p>hit points</p>
         </div>
       </div>

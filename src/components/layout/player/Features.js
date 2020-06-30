@@ -7,37 +7,47 @@ import CharProficiencies from "../player/CharProficiencies";
 
 const Features = ({ data, setData }) => {
   return (
-    <div className="row">
+    <div className="row tab-container">
       <div className="col s12">
         <ul className="tabs">
           <li className="tab col s3">
-            <a className="active" href="#test1">
+            <a className="active" href="#featuresTraits">
               Features and Traits
             </a>
           </li>
           <li className="tab col s3">
-            <a href="#test2">Description</a>
+            <a href="#charDescription">Description</a>
           </li>
           <li className="tab col s3">
-            <a href="#test3">Equipment</a>
+            <a href="#charEquipment">Equipment</a>
           </li>
           <li className="tab col s3">
-            <a href="#test4">Proficiencies</a>
+            <a href="#charProficiencies">Proficiencies</a>
           </li>
         </ul>
       </div>
-      <div id="test1" className="col s12">
-        <ClassFeature data={data} setData={setData} />
-        <RacialTraits />
-      </div>
-      <div id="test2" className="col s12">
-        <CharDescription data={data} setData={setData} />
-      </div>
-      <div id="test3" className="col s12">
-        <CharEquipment />
-      </div>
-      <div id="test4" className="col s12">
-        <CharProficiencies />
+      <div>
+        <div id="featuresTraits" className="col s12">
+          <div className="white p-1">
+            <ClassFeature data={data} setData={setData} />
+            <RacialTraits />
+          </div>
+        </div>
+        <div id="charDescription" className="col s12">
+          <div className="white p-1">
+            <CharDescription data={data} setData={setData} />
+          </div>
+        </div>
+        <div id="charEquipment" className="col s12">
+          <div className="white p-1">
+            <CharEquipment />
+          </div>
+        </div>
+        <div id="charProficiencies" className="col s12">
+          <div className="white p-1">
+            <CharProficiencies />
+          </div>
+        </div>
       </div>
     </div>
   );

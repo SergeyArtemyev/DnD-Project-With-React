@@ -26,22 +26,20 @@ const CharProficiencies = () => {
   }, [playerClass]);
 
   return (
-    <div className="proficiencies white">
+    <div>
       <h3>Proficiencies</h3>
       <p>
-        <span className="main-color">Proficient in Armor:</span>
-        {profArmor}
+        <span className="main-color underline">Proficient in Armor:</span> {profArmor}
       </p>
       <p>
-        <span className="main-color">Proficient in Weapon:</span>
-        {profWeapons}
+        <span className="main-color underline">Proficient in Weapon:</span> {profWeapons}
       </p>
       <p>
-        <span className="main-color">Proficient in Vehicles:</span>
+        <span className="main-color underline">Proficient in Vehicles:</span>{" "}
         {vehicleProff === undefined ? "None" : vehicleProff}
       </p>
       <p>
-        <span className="main-color">Proficient in Tools:</span>
+        <span className="main-color underline">Proficient in Tools:</span>{" "}
         {profTool === undefined ? "None" : profTool}
       </p>
     </div>

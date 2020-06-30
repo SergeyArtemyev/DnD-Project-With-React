@@ -14,22 +14,22 @@ const Equipment = () => {
           <h5 className="center-align">Main Weapon</h5>
           <div style={{ textAlign: "left", width: "300px", margin: "0 auto" }}>
             <label>
-              <input type="checkbox" name="m-weapon" id="sword" value="Sword" />
+              <input type="checkbox" name="mWeapon" id="sword" value="Sword" />
               <span>Sword</span>
             </label>
             <br />
             <label>
-              <input type="checkbox" name="m-weapon" id="crossbow" value="Crossbow" />
+              <input type="checkbox" name="mWeapon" id="crossbow" value="Crossbow" />
               <span>Crossbow</span>
             </label>
             <br />
             <label>
-              <input type="checkbox" name="m-weapon" id="wand" value="Magic Wand" />
+              <input type="checkbox" name="mWeapon" id="wand" value="Magic Wand" />
               <span>Magic Wand</span>
             </label>
             <br />
             <label>
-              <input type="checkbox" name="m-weapon" id="dagger" value="Dagger" />
+              <input type="checkbox" name="mWeapon" id="dagger" value="Dagger" />
               <span>Dagger</span>
             </label>
           </div>
@@ -38,22 +38,22 @@ const Equipment = () => {
           <h5 className="center-align">Secondary Weapon</h5>
           <div style={{ textAlign: "left", width: "300px", margin: "0 auto" }}>
             <label>
-              <input type="checkbox" name="s-weapon" id="twohanded-sw" value="Two-Handed Sword" />
+              <input type="checkbox" name="sWeapon" id="twohanded-sw" value="Two-Handed Sword" />
               <span>Two-handed Sword</span>
             </label>
             <br />
             <label>
-              <input type="checkbox" name="s-weapon" id="bow" value="Bow" />
+              <input type="checkbox" name="sWeapon" id="bow" value="Bow" />
               <span>Bow</span>
             </label>
             <br />
             <label>
-              <input type="checkbox" name="s-weapon" id="s-wand" value="Magic Wand" />
+              <input type="checkbox" name="sWeapon" id="s-wand" value="Magic Wand" />
               <span>Magic Wand</span>
             </label>
             <br />
             <label>
-              <input type="checkbox" name="s-weapon" id="s-dagger" value="Dagger" />
+              <input type="checkbox" name="sWeapon" id="s-dagger" value="Dagger" />
               <span>Dagger</span>
             </label>
           </div>

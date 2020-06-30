@@ -1,6 +1,10 @@
+* {
+  box-sizing: border-box;
+}
 body {
   font-family: "Permanent Marker", cursive;
 }
+/* Utility */
 .underline {
   text-decoration: underline;
 }
@@ -9,6 +13,7 @@ body {
 }
 .main-color {
   color: #ee5b60;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.596), 1px 0 1px rgba(0, 0, 0, 0.596), 0 0 2px #000000;
 }
 .main-bg:hover {
   background: #ee6e73;
@@ -20,8 +25,10 @@ h4,
 h5,
 h6 {
   color: #c25054;
-  /* text-shadow: 0 0 3px #000; */
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.596), 1px 0 1px rgba(0, 0, 0, 0.596), 0 0 2px #000000;
+}
+.p-1 {
+  padding: 1rem;
 }
 /* Navbar */
 nav,
@@ -159,10 +166,13 @@ img {
   color: #ff4e54;
 }
 
-/* Description section */
+/* Description of the each tab */
 .description {
   padding: 1rem;
   border: 1px solid #e0e0e0;
+}
+.description h3 {
+  margin-top: 0;
 }
 .collapsible-header {
   justify-content: space-between;
@@ -334,13 +344,16 @@ input[type="number"]::-webkit-outer-spin-button {
   padding: 0.7rem 1rem;
 }
 /* Character sheet */
+/* Heading */
 #character-sheet {
   padding: 2rem 0;
   background: url("./img/body-background3.jpg") no-repeat center center/cover;
   background-attachment: fixed;
 }
 #character-sheet .heading {
-  background: #fff;
+  background: #fffefe;
+  padding: 1rem 0;
+  margin: 0rem;
 }
 #character-sheet .avatar {
   cursor: auto;
@@ -360,15 +373,16 @@ input[type="number"]::-webkit-outer-spin-button {
   background: #ccc;
   border-radius: 10px;
 }
+
 /* Ability points */
 .ab-point {
   text-align: center;
   margin-bottom: 1rem;
   background: #fff;
+  padding: 1rem 0;
 }
 .ab-point p:first-child {
   margin-top: 0;
-  padding-top: 1rem;
 }
 .ab-border {
   border: 1px solid #ccc;
@@ -376,18 +390,51 @@ input[type="number"]::-webkit-outer-spin-button {
   width: 60px;
   margin: 0 auto;
   background: #e7585d;
-  color: #fff;
+  color: #f4f4f4;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.596), 1px 0 1px rgba(0, 0, 0, 0.596), 0 0 2px #000000;
 }
+/* Prof bonus */
 .prof-bonus {
   background: #fff;
   margin-bottom: 1rem;
   padding: 1rem;
 }
+
+/* Savings */
 .savings {
   background: #fff;
   margin-bottom: 1rem;
   padding: 1rem;
 }
+
+/* Skill section */
+.skills {
+  padding: 1rem;
+}
+.circle {
+  display: inline-block;
+  border: 1px solid #ccc;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+.prof-y {
+  border-color: #000;
+  position: relative;
+}
+.prof-y::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 /* Ac-init-speed-hp */
 .ac,
 .init,
@@ -395,4 +442,37 @@ input[type="number"]::-webkit-outer-spin-button {
 .hp {
   background: #fff;
   padding: 1rem;
+}
+
+/* Tabs container */
+
+.tab-container h3 {
+  margin-top: 0;
+}
+.tab-container .tabs .tab a {
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.596), 1px 0 1px rgba(0, 0, 0, 0.596), 0 0 2px #000000;
+  color: #ee6e73;
+}
+.tab-container .tabs .tab a.active,
+.tab-container .tabs .tab a:hover {
+  color: #ff4e54;
+}
+#character-sheet .heading,
+#character-sheet .ab-point,
+#character-sheet .prof-bonus,
+#character-sheet .savings,
+#character-sheet .skills,
+.ac,
+.init,
+.speed,
+.hp {
+  border-radius: 15px;
+}
+.tab-container .tabs {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.tab-container div div {
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
 }

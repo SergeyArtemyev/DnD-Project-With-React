@@ -18,11 +18,9 @@ const Race = () => {
   useEffect(() => {
     getRace(racePicture);
     abilityScoreFunction();
-    console.log(2);
-
     // eslint-disable-next-line
   }, [racePicture]);
-  console.log(1);
+
   const onChange = (e) => {
     setRacePicture(e.target.value);
   };
