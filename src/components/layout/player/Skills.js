@@ -25,9 +25,9 @@ const Skills = ({ data }) => {
     });
   };
 
-  if (skills.length > 0) {
-    isProf();
-  }
+  // if (skills.length > 0) {
+  isProf();
+  // }
 
   return (
     <div className="skills white">

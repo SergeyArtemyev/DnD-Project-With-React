@@ -2,7 +2,7 @@ import React from "react";
 
 const AbPoints = () => {
   return (
-    <div className="col s6">
+    <div className="col l6 s12">
       <div className="row">
         <div className="col s6">
           <div>
@@ -11,7 +11,10 @@ const AbPoints = () => {
           </div>
           <div className="ability-description">
             <h5>Strength</h5>
-            <p>Strength measures bodily power, athletic training, and the extent to which you can exert raw physical force.</p>
+            <p>
+              Strength measures bodily power, athletic training, and the extent to which you can
+              exert raw physical force.
+            </p>
           </div>
         </div>
         <div className="col s6 p-1-side text-align-center">

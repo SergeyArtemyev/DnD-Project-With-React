@@ -19,7 +19,12 @@
       "id": "Elf",
       "racial traits": {
         "abscore": "+2 Dexterity",
-        "skills": ["Darkvision", "Keen Senses", "Fey Ancestry", "Trance"]
+        "skills": [
+          "Darkvision",
+          "Keen Senses",
+          "Fey Ancestry",
+          "Trance"
+        ]
       },
       "description": {
         "info": "Elves are a magical people of otherworldly grace, living in the world but not entirely part of it.",
@@ -35,7 +40,11 @@
       "id": "Halfling",
       "racial traits": {
         "abscore": "+2 Dexterity",
-        "skills": ["Lucky", "Brave", "Halfling Nimbenes"]
+        "skills": [
+          "Lucky",
+          "Brave",
+          "Halfling Nimbenes"
+        ]
       },
       "description": {
         "info": "The diminutive halflings survive in a world full of larger creatures by avoiding notice or, barring that, avoiding offense.",
@@ -51,7 +60,12 @@
       "id": "Dwarf",
       "racial traits": {
         "abscore": "+2 Constitution",
-        "skills": ["Darkvision", "Dwarven Resilience", "Dwarven Combat Training", "Stonecunning"]
+        "skills": [
+          "Darkvision",
+          "Dwarven Resilience",
+          "Dwarven Combat Training",
+          "Stonecunning"
+        ]
       },
       "description": {
         "info": "Bold and hardy, dwarves are known as skilled warriors, miners, and workers of stone and metal.",
@@ -159,7 +173,10 @@
       "id": "Acolyte",
       "description": {
         "info": "You have spent your life in the service of a temple to a specific god or pantheon of gods. You act as an intermediary between the realm of the holy and the mortal world, performing sacred rites and offering sacrifices in order to conduct worshipers into the presence of the divine. You are not necessarily a cleric—performing sacred rites is not the same thing as channeling divine power.",
-        "skillProff": ["Insight", "Religion"],
+        "skillProff": [
+          "Insight",
+          "Religion"
+        ],
         "backFeature": "Shelter Of The Faithful",
         "featureInfo": "As an acolyte, you command the respect of those who share your faith, and you can perform the religious ceremonies of your deity. You and your adventuring companions can expect to receive free healing and care at a temple, shrine, or other established presence of your faith, though you must provide any material components needed for spells. Those who share your religion will support you (but only you) at a modest lifestyle.You might also have ties to a specific temple dedicated to your chosen deity or pantheon, and you have a residence there. This could be the temple where you used to serve, if you remain on good terms with it, or a temple where you have found a new home. While near your temple, you can call upon the priests for assistance, provided the assistance you ask for is not hazardous and you remain in good standing with your temple."
       }
@@ -168,7 +185,10 @@
       "id": "Criminal or Spy",
       "description": {
         "info": "You are an experienced criminal with a history of breaking the law. You have spent a lot of time among other criminals and still have contacts within the criminal underworld. You’re far closer than most people to the world of murder, theft, and violence that pervades the underbelly of civilization, and you have survived up to this point by flouting the rules and regulations of society.",
-        "skillProff": ["Deception", "Stealth"],
+        "skillProff": [
+          "Deception",
+          "Stealth"
+        ],
         "toolProff": "Thieves' Tools",
         "backFeature": "Criminal Contact",
         "featureInfo": "You have a reliable and trustworthy contact who acts as your liaison to a network of other criminals. You know how to get messages to and from your contact, even over great distances; specifically, you know the local messengers, corrupt caravan masters, and seedy sailors who can deliver messages for you."
@@ -178,7 +198,10 @@
       "id": "Folk Hero",
       "description": {
         "info": "You come from a humble social rank, but you are destined for so much more. Already the people of your home village regard you as their champion, and your destiny calls you to stand against the tyrants and monsters that threaten the common folk everywhere.",
-        "skillProff": ["Animal Handling", "Survival"],
+        "skillProff": [
+          "Animal Handling",
+          "Survival"
+        ],
         "vehicleProff": "Vehicles (Land)",
         "backFeature": "Rustic Hospitality",
         "featureInfo": "Since you come from the ranks of the common folk, you fit in among them with ease. You can find a place to hide, rest, or recuperate among other commoners, unless you have shown yourself to be a danger to them. They will shield you from the law or anyone else searching for you, though they will not risk their lives for you."
@@ -196,7 +219,10 @@
       "id": "Sage",
       "description": {
         "info": "You spent years learning the lore of the multiverse. You scoured manuscripts, studied scrolls, and listened to the greatest experts on the subjects that interest you. Your efforts have made you a master in your fields of study.",
-        "skillProff": ["Arcana", "History"],
+        "skillProff": [
+          "Arcana",
+          "History"
+        ],
         "backFeature": "Researcher",
         "featureInfo": "When you attempt to learn or recall a piece of lore, if you do not know that information, you often know where and from whom you can obtain it. Usually, this information comes from a library, scriptorium, university, or a sage or other learned person or creature. Your DM might rule that the knowledge you seek is secreted away in an almost inaccessible place, or that it simply cannot be found. Unearthing the deepest secrets of the multiverse can require an adventure or even a whole campaign."
       }
@@ -205,62 +231,15 @@
       "id": "Soldier",
       "description": {
         "info": "War has been your life for as long as you care to remember. You trained as a youth, studied the use of weapons and armor, learned basic survival techniques, including how to stay alive on the battlefield. You might have been part of a standing national army or a mercenary company, or perhaps a member of a local militia who rose to prominence during a recent war.<br/>When you choose this background, work with your DM to determine which military organization you were a part of, how far through its ranks you progressed, and what kind of experiences you had during your military career. Was it a standing army, a town guard, or a village militia? Or it might have been a noble’s or merchant’s private army, or a mercenary company.",
-        "skillProff": ["Athletics", "Intimidation"],
+        "skillProff": [
+          "Athletics",
+          "Intimidation"
+        ],
         "vehicleProff": "Vehicles (Land)",
         "backFeature": "Military Rank",
         "featureInfo": "You have a military rank from your career as a soldier. Soldiers loyal to your former military organization still recognize your authority and influence, and they defer to you if they are of a lower rank. You can invoke your rank to exert influence over other soldiers and requisition simple equipment or horses for temporary use. You can also usually gain access to friendly military encampments and fortresses where your rank is recognized."
       }
     }
   ],
-  "player": [
-    {
-      "race": "Halfling",
-      "playerClass": "Ranger",
-      "rangerSkill1": "Perception",
-      "rangerSkill2": "History",
-      "rangerSkill3": "Survival",
-      "favoredEnemy": "Dragons",
-      "rangerLang": "Goblin",
-      "naturalExplorer": "Desert",
-      "str": "8",
-      "strMod": "-1",
-      "strengthPoints": "8",
-      "dex": "15",
-      "dexMod": "3",
-      "dexterityPoints": "17",
-      "con": "12",
-      "conMod": "1",
-      "constitutionPoints": "12",
-      "int": "14",
-      "intMod": "2",
-      "intelligencePoints": "14",
-      "wis": "13",
-      "wisMod": "1",
-      "wisdomPoints": "13",
-      "char": "10",
-      "charMod": "0",
-      "charismaPoints": "10",
-      "avatar": "data:image/png;base64,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",
-      "charName": "Hero",
-      "background": "Haunted One",
-      "skill1": "Investigation",
-      "skill2": "Arcana",
-      "adLanguage": "Draconic",
-      "alignment": "Chaotic Neutral",
-      "faith": "Some Religion",
-      "lifestyle": "Modest",
-      "hair": "Black",
-      "skin": "White",
-      "eyes": "Green",
-      "height": "180",
-      "weight": "90",
-      "age": "30",
-      "gender": "Male",
-      "mWeapon": "Magic Wand",
-      "sWeapon": "Bow",
-      "potions": "2 Heal Potions",
-      "stuff": "5 Lockpick",
-      "id": 1
-    }
-  ]
+  "player": []
 }

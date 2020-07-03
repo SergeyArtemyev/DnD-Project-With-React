@@ -229,13 +229,14 @@ const ClassDescription = () => {
           </div>
           <div className="collapsible-body">
             <p>
-              <span>Hit Dice:</span> {hitDice}
+              <span className="main-color underline">Hit Dice:</span> {hitDice}
             </p>
             <p>
-              <span>Hit Points at 1st Level:</span> {hitAtFirstLvl}
+              <span className="main-color underline">Hit Points at 1st Level:</span> {hitAtFirstLvl}
             </p>
             <p>
-              <span>Hit Points at Higher Levels:</span> {hitAtHigherLvl}
+              <span className="main-color underline">Hit Points at Higher Levels:</span>{" "}
+              {hitAtHigherLvl}
             </p>
           </div>
         </li>
@@ -247,19 +248,19 @@ const ClassDescription = () => {
           </div>
           <div className="collapsible-body">
             <p>
-              <span>Armor:</span> {profArmor}
+              <span className="main-color underline">Armor:</span> {profArmor}
             </p>
             <p>
-              <span>Weapons:</span> {profWeapons}
+              <span className="main-color underline">Weapons:</span> {profWeapons}
             </p>
             <p>
-              <span>Tools:</span> {profTool}
+              <span className="main-color underline">Tools:</span> {profTool}
             </p>
             <p>
-              <span>Saving Throws:</span> {savingThrow}
+              <span className="main-color underline">Saving Throws:</span> {savingThrow}
             </p>
             <p>
-              <span>Skills:</span> {skills}
+              <span className="main-color underline">Skills:</span> {skills}
             </p>
             <p>{profSelect}</p>
           </div>

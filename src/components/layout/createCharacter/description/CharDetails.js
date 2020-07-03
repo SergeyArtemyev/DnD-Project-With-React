@@ -6,7 +6,7 @@ const CharDetails = () => {
   return (
     <>
       <div className="row">
-        <div className="col s4">
+        <div className="col l4 m6 s12">
           <Alignment />
           <br />
           <div className="input-field">

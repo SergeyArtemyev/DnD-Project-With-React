@@ -26,6 +26,8 @@ const CharDescription = ({ data, setData }) => {
       skin,
       age,
       weight,
+      skill1,
+      skill2,
     },
     getCharData,
   } = playerContext;
@@ -37,22 +39,33 @@ const CharDescription = ({ data, setData }) => {
   }, [background]);
 
   useEffect(() => {
-    if (skillProff) {
+    if (skill1) {
+      data.array.push(skill1, skill2);
+      setData({ ...data });
+    } else if (skillProff) {
       data.array.push(...skillProff);
       setData({ ...data });
     }
     // eslint-disable-next-line
-  }, [skillProff]);
+  }, [skillProff, skill1, skill2]);
 
   return (
     <div>
       <h3>Background</h3>
       <p className="main-color underline">{background}</p>
       <p>{info}</p>
-      {background === "Haunted One" ? null : (
+      {background === "Haunted One" ? (
         <>
           <p className="main-color underline">Proficiency</p>
-          <ul>
+          <ul className="browser-default">
+            <li>{skill1}</li>
+            <li>{skill2}</li>
+          </ul>
+        </>
+      ) : (
+        <>
+          <p className="main-color underline">Proficiency</p>
+          <ul className="browser-default">
             {skillProff !== undefined
               ? skillProff.map((skill) => (
                   <li className="profskills" key={v4()}>
@@ -69,11 +82,11 @@ const CharDescription = ({ data, setData }) => {
       <table>
         <thead>
           <tr>
-            <th>Alignment</th>
-            <th>Gender</th>
-            <th>Eyes</th>
-            <th>Lifestyle</th>
-            <th>Height</th>
+            <th className="main-color underline">Alignment</th>
+            <th className="main-color underline">Gender</th>
+            <th className="main-color underline">Eyes</th>
+            <th className="main-color underline">Lifestyle</th>
+            <th className="main-color underline">Height</th>
           </tr>
         </thead>
         <tbody>
@@ -90,11 +103,11 @@ const CharDescription = ({ data, setData }) => {
         </tbody>
         <thead>
           <tr>
-            <th>Faith</th>
-            <th>Hair</th>
-            <th>Skin</th>
-            <th>Age</th>
-            <th>Weight</th>
+            <th className="main-color underline">Faith</th>
+            <th className="main-color underline">Hair</th>
+            <th className="main-color underline">Skin</th>
+            <th className="main-color underline">Age</th>
+            <th className="main-color underline">Weight</th>
           </tr>
         </thead>
         <tbody>

@@ -2,7 +2,7 @@ import React from "react";
 
 const AbilityScore = () => {
   return (
-    <div className="col s6">
+    <div className="col l6 s12">
       <table className="ab-table striped">
         <thead>
           <tr>

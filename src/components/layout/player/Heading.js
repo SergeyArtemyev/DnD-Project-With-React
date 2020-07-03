@@ -12,39 +12,50 @@ const Heading = () => {
   const {
     playerData: { race, playerClass, background, charName, alignment, avatar },
     getCharData,
+    deleteChar,
   } = playerContext;
 
+  const onClick = () => {
+    deleteChar();
+    window.location = "/";
+  };
+
   return (
-    <div className="heading row">
+    <div className="row heading">
       <div className="avatar col s4">
         <img className="char-avatar" src={avatar} alt="" />
         <span className="name">{charName}</span>
       </div>
-      <div className="col s6">
+      <div className="col s6 row">
         <table>
           <tbody>
             <tr>
-              <th>{playerClass}</th>
-              <th>{background}</th>
-              <th>{charName}</th>
+              <th className="main-color underline">Class</th>
+              <th className="main-color underline">background</th>
+              <th className="main-color underline">player name</th>
             </tr>
             <tr>
-              <td>class</td>
-              <td>background</td>
-              <td>player name</td>
+              <td>{playerClass}</td>
+              <td>{background}</td>
+              <td>{charName}</td>
             </tr>
             <tr>
-              <th>{race}</th>
-              <th>{alignment}</th>
-              <th>1</th>
+              <th className="main-color underline">race</th>
+              <th className="main-color underline">alignment</th>
+              <th className="main-color underline">level</th>
             </tr>
             <tr>
-              <td>race</td>
-              <td>alignment</td>
-              <td>level</td>
+              <td>{race}</td>
+              <td>{alignment}</td>
+              <td>1</td>
             </tr>
           </tbody>
         </table>
+      </div>
+      <div className="col s2">
+        <button id="delete-btn" onClick={onClick}>
+          Delete Character
+        </button>
       </div>
     </div>
   );

@@ -4,7 +4,7 @@ const PhysCharacteristics = () => {
   return (
     <>
       <div className="row">
-        <div className="col s4">
+        <div className="col l4 m6 s12">
           <div className="input-field">
             <input id="hair" type="text" name="hair" className="validate" />
             <label htmlFor="hair">Hair</label>

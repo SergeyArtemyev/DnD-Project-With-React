@@ -1,7 +1,7 @@
 import React, { useReducer } from "react";
 import PlayerContext from "./playerContext";
 import PlayerReducer from "./playerReducer";
-import { GET_CHAR_DATA } from "../../types";
+import { GET_CHAR_DATA, DELETE_CHAR } from "../../types";
 import axios from "axios";
 
 const PlayerState = (props) => {
@@ -10,7 +10,7 @@ const PlayerState = (props) => {
   };
 
   const [state, dispatch] = useReducer(PlayerReducer, initialState);
-  // Add all farm data to data base
+  // Add all form data to data base
   const addPlayer = async (playerdata) => {
     const config = {
       headers: {
@@ -28,12 +28,18 @@ const PlayerState = (props) => {
     });
   };
 
+  const deleteChar = async () => {
+    await axios.delete("http://localhost:5000/player/1");
+    dispatch({ type: DELETE_CHAR });
+  };
+
   return (
     <PlayerContext.Provider
       value={{
         playerData: state.playerData,
         addPlayer,
         getCharData,
+        deleteChar,
       }}
     >
       {props.children}

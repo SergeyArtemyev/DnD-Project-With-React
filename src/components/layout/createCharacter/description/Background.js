@@ -28,7 +28,7 @@ const Background = () => {
   return (
     <>
       <div className="row">
-        <div className="input-field col s4">
+        <div className="input-field col l4 s8">
           <select className="browser-default" name="background" onChange={onChange}>
             <option value="">--Choose your background--</option>
             <option value="Acolyte">Acolyte</option>
@@ -45,14 +45,16 @@ const Background = () => {
           <hr />
           <p>{info}</p>
           <div>
-            Skill Proficiencies:{" "}
-            {skillProff !== undefined
-              ? skillProff.map((skill) => <span key={v4()}> {skill} </span>)
-              : null}
+            <span className="main-color underline">Skill Proficiencies:</span>{" "}
+            <ul className="browser-default">
+              {skillProff !== undefined
+                ? skillProff.map((skill) => <li key={v4()}> {skill} </li>)
+                : null}
+            </ul>
             {backgroundName === "Haunted One" ? (
               <>
                 <div className="row">
-                  <div className="col s4">
+                  <div className="col l4 m6 s12">
                     <br />
                     <Skill1 />
                     <br />
@@ -62,10 +64,24 @@ const Background = () => {
               </>
             ) : null}
           </div>
-          {toolProff !== undefined ? <p>Tool Proficiencies: {toolProff}</p> : null}
-          {vehicleProff !== undefined ? <p>Vehicle Proficiencies: {vehicleProff}</p> : null}
+          {toolProff !== undefined ? (
+            <p>
+              <span className="main-color underline">Tool Proficiencies:</span>
+              <ul className="browser-default">
+                <li>{toolProff}</li>
+              </ul>
+            </p>
+          ) : null}
+          {vehicleProff !== undefined ? (
+            <p>
+              <span className="main-color underline">Vehicle Proficiencies:</span>
+              <ul className="browser-default">
+                <li>{vehicleProff}</li>
+              </ul>
+            </p>
+          ) : null}
           <div className="row">
-            <div className="col s4">
+            <div className="col l4 m6 s12">
               <BackOptions />
             </div>
           </div>
