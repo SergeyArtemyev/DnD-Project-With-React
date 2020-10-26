@@ -21,7 +21,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "json:server": "json-server --port 5000 --watch api/db.json",
+    "json:server": "json-server --port process.env.PORT --watch api/db.json",
     "dev": "concurrently \"npm run start\" \"npm run json:server\"",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install && npm run build"
 
